@@ -1,0 +1,99 @@
+html {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+section,
+.jumbotron {
+  height: 100vh;
+  background-size: cover;
+}
+
+/* Awal dari Jumbotron */
+.jumbotron {
+  background-color: #fff !important;
+}
+
+.jumbotron .container {
+  margin: 10px auto;
+}
+
+.jumbotron img {
+  width: 20%;
+}
+
+.jumbotron #tsukilas {
+  font-size: 2.9rem;
+  font-family: "Eczar", serif;
+  font-weight: 600;
+}
+
+.jumbotron img {
+  transform: scale(1.2);
+}
+
+.jumbotron p {
+  font-size: 1.8rem;
+}
+/* End of Jumbotron */
+
+/* Bagian deskripsi eskul */
+#deskripsi {
+  background-image: linear-gradient(#e0fbfc, #98c1d9);
+}
+
+#deskripsi h2 {
+  font-weight: 500;
+  color: #111a0a;
+  font-family: "Kufam", cursive;
+}
+/* Bagian Akhir Deskripsi */
+
+@media (max-width: 576px) {
+  .jumbotron .container {
+    margin: 100px auto;
+  }
+
+  .jumbotron img {
+    width: 35%;
+    transform: scale(1.4);
+  }
+
+  .jumbotron #tsukilas {
+    font-size: 2.4rem;
+  }
+
+  .jumbotron p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .jumbotron .container {
+    margin: 50px auto;
+  }
+
+  .jumbotron img {
+    width: 29%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .jumbotron .container {
+    margin: 15px auto;
+  }
+
+  .jumbotron img {
+    width: 28%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .jumbotron .container {
+    margin: 10px auto;
+  }
+
+  .jumbotron img {
+    width: 22%;
+  }
+}
