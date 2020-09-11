@@ -39,12 +39,12 @@ section,
 
 /* Bagian deskripsi eskul */
 #deskripsi {
-  background-image: linear-gradient(to bottom, #e0fbfc, #98c1d9);
+  background-image: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 
 #deskripsi h2 {
   font-weight: 500;
-  color: #111a0a;
+  color: #353535;
   font-family: "Kufam", cursive;
 }
 
@@ -54,6 +54,7 @@ section,
 
 #deskripsi p {
   font-size: 1.3rem;
+  color: #011627;
 }
 /* Bagian Akhir Deskripsi */
 
