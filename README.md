@@ -4,8 +4,6 @@ Ini adalah sumber kode dimana website resmi karya ilmiah remaja smp negeri 13 be
 
 > Project ini ditangani oleh [Ezra Khairan Permana](github.com/reacto11mecha/)
 
-<br />
-
 ### Local development
 
 > :warning: **Pastikan** Node.js dan npm sudah terinstall dengan benar.
@@ -29,8 +27,6 @@ npm start
 ```
 
 Bisa dibuka di [http://localhost:3000](http://localhost:3000) untuk melihatnya langsung di peramban.
-
-<br />
 
 ### Seluruh script yang ada
 
