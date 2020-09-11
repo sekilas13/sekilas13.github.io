@@ -5,20 +5,24 @@ function Deskripsi() {
   return (
     <section id="deskripsi">
       <Container>
-        <Row className="justify-content-left">
-          <Col>
-            <h2 className="mt-4">Apa itu KIR ?</h2>
+        <Row className="justify-content-center">
+          <Col className="mt-3">
+            <h2 className="text-center">Apa itu KIR ?</h2>
           </Col>
         </Row>
 
-        <Row>
+        <Row className="justify-content-center mt-3">
           <Col sm={5}>
             <p>
-              Kir adalah salah satu ekstrakurikuler di smp negeri 13 Bekasi yang
-              bertemakan ekstrakurikuler yang menyediakan berbagai kegiatan unik
-              dan beragam, tentunya anti mainstream.Ekstrakurikuler kir berbeda
-              dengan ekstrakulikuler kebanyakan, di kir kalian dapat menemukan
-              segala sesuatu hal yang baru.
+              Kir adalah salah satu ekstrakurikuler di{" "}
+              <a href="https://smpn13kotabekasi.sch.id/">
+                SMP Negeri 13 Bekasi
+              </a>{" "}
+              yang bertemakan ekstrakurikuler yang menyediakan berbagai kegiatan
+              unik dan beragam, tentunya kegiatannya juga anti mainstream.
+              Ekstrakurikuler kir berbeda dengan ekstrakulikuler kebanyakan, di
+              kir kalian dapat menemukan segala sesuatu hal yang baru. Terkadang
+              kir dalam 6 bulan akan mengikuti olimpiade.
             </p>
           </Col>
           <Col sm={5}>

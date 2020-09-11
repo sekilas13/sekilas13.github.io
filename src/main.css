@@ -29,7 +29,7 @@ section,
 }
 
 .jumbotron img {
-  transform: scale(1.2);
+  transform: scale(2.2);
 }
 
 .jumbotron p {
@@ -39,13 +39,21 @@ section,
 
 /* Bagian deskripsi eskul */
 #deskripsi {
-  background-image: linear-gradient(#e0fbfc, #98c1d9);
+  background-image: linear-gradient(to bottom, #e0fbfc, #98c1d9);
 }
 
 #deskripsi h2 {
   font-weight: 500;
   color: #111a0a;
   font-family: "Kufam", cursive;
+}
+
+#deskripsi h2 {
+  font-size: 2.3rem;
+}
+
+#deskripsi p {
+  font-size: 1.3rem;
 }
 /* Bagian Akhir Deskripsi */
 
@@ -66,6 +74,14 @@ section,
   .jumbotron p {
     font-size: 1.4rem;
   }
+
+  #deskripsi h2 {
+    font-size: 2rem;
+  }
+
+  #deskripsi p {
+    font-size: 1.05rem;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -75,6 +91,15 @@ section,
 
   .jumbotron img {
     width: 29%;
+    transform: scale(1.6);
+  }
+
+  #deskripsi h2 {
+    font-size: 2rem;
+  }
+
+  #deskripsi p {
+    font-size: 1.08rem;
   }
 }
 
@@ -85,6 +110,15 @@ section,
 
   .jumbotron img {
     width: 28%;
+    transform: scale(1.8);
+  }
+
+  #deskripsi h2 {
+    font-size: 2.1rem;
+  }
+
+  #deskripsi p {
+    font-size: 1.1rem;
   }
 }
 
@@ -95,5 +129,14 @@ section,
 
   .jumbotron img {
     width: 22%;
+    transform: scale(2);
+  }
+
+  #deskripsi h2 {
+    font-size: 2.1rem;
+  }
+
+  #deskripsi p {
+    font-size: 1.1rem;
   }
 }
