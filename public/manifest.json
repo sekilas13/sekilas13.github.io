@@ -1,5 +1,8 @@
 {
   "name": "Kir SMP Negeri 13 Kota Bekasi",
+  "description": "Website resmi ekstrakurikuler Karya Ilmiah Remaja SMP Negeri 13 Bekasi",
+  "theme_color": "#f0efeb",
+  "scope": "/",
   "icons": [
     {
       "src": "/android-icon-36x36.png",
