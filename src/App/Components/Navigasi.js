@@ -16,17 +16,15 @@ function Navigasi() {
   const handleLink = (e) => {
     e.preventDefault();
 
-    // if (e.target !== null) {
     const el = document.querySelector(e.target.id.split("-link")[0]);
     const tujuan = el.offsetTop - ref.current.getBoundingClientRect().height;
     window.scrollTo(0, tujuan);
-    // }
   };
 
   const Link = ["Deskripsi", "Gambar"];
 
   return (
-    <Navbar bg="primary" variant="dark" sticky="top" ref={ref}>
+    <Navbar bg="light" variant="light" sticky="top" ref={ref}>
       <Container>
         <Navbar.Brand href="#" onClick={handleBrand}>
           KIR
