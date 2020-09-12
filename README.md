@@ -2,7 +2,7 @@
 
 Ini adalah sumber kode dimana website resmi karya ilmiah remaja smp negeri 13 bekasi berasal. Project ini menggunakan React.js dan beberapa package yang lain sudah tertera di [package.json](package.json).
 
-> Project ini ditangani oleh [Ezra Khairan Permana](github.com/reacto11mecha/)
+> Project ini ditangani oleh [Ezra Khairan Permana](https://github.com/reacto11mecha/)
 
 ### Local development
 
