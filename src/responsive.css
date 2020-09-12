@@ -16,16 +16,16 @@
     font-size: 1.4rem;
   }
 
-  #gambar {
-    height: 385vh;
-  }
-
   #deskripsi h2 {
     font-size: 2rem;
   }
 
   #deskripsi p {
     font-size: 1.05rem;
+  }
+
+  #gambar {
+    height: 345vh;
   }
 }
 
@@ -45,6 +45,10 @@
 
   #deskripsi p {
     font-size: 1rem;
+  }
+
+  #gambar {
+    height: 350vh;
   }
 }
 
