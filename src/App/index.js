@@ -1,11 +1,13 @@
 import React, { Fragment } from "react";
-import { JumbotronTop, Deskripsi } from "./Components";
+import { Navigasi, JumbotronTop, Deskripsi, Gambar } from "./Components";
 
 function App() {
   return (
     <Fragment>
+      <Navigasi />
       <JumbotronTop />
       <Deskripsi />
+      <Gambar />
     </Fragment>
   );
 }
