@@ -1,14 +1,15 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Navigasi, JumbotronTop, Deskripsi, Gambar } from "./Components";
+import SimpleReactLightbox from "simple-react-lightbox";
 
 function App() {
   return (
-    <Fragment>
+    <SimpleReactLightbox>
       <Navigasi />
       <JumbotronTop />
       <Deskripsi />
       <Gambar />
-    </Fragment>
+    </SimpleReactLightbox>
   );
 }
 

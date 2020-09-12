@@ -3,7 +3,7 @@ html {
   scroll-behavior: smooth;
 }
 
-section,
+#deskripsi,
 .jumbotron {
   height: 100vh;
   background-size: cover;
@@ -60,8 +60,7 @@ section,
 
 /* Bagian Gambar */
 #gambar {
-  /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
-  /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
-  /* background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); */
   background-color: #2b2d42;
+  height: 100vh;
+  background-size: cover;
 }
