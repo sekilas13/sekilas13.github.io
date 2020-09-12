@@ -43,6 +43,7 @@ function JumbotronTop() {
                   <animated.img
                     src={LogoSakral}
                     className="img-fluid text-center rounded"
+                    alt="Logo KIR"
                     style={{
                       transform: offset.interpolate(calc),
                       overflow: "hidden",
