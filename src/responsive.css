@@ -1,3 +1,10 @@
+@media (min-width: 474px) and (max-width: 564px) {
+  #gambar img {
+    width: 80%;
+    margin-left: 50px;
+  }
+}
+
 @media (max-width: 576px) {
   .jumbotron .container {
     margin: 60px auto;
@@ -25,7 +32,11 @@
   }
 
   #gambar {
-    height: 345vh;
+    height: 300vh;
+  }
+
+  footer {
+    height: 28vh;
   }
 }
 
@@ -68,6 +79,10 @@
 
   #deskripsi p {
     font-size: 1.1rem;
+  }
+
+  #gambar img {
+    transform: scale(1.2);
   }
 }
 
