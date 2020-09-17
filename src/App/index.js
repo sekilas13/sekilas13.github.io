@@ -3,7 +3,7 @@ import {
   Navigasi,
   JumbotronTop,
   Deskripsi,
-  kataOrang,
+  KataOrang,
   Gambar,
   Footer,
 } from "./Components";
@@ -15,7 +15,7 @@ function App() {
       <Navigasi />
       <JumbotronTop />
       <Deskripsi />
-      <kataOrang />
+      <KataOrang />
       <Gambar />
       <Footer />
     </SimpleReactLightbox>
