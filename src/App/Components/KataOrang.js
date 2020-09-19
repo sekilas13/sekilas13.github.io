@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
+import data from "../asset/data";
 
 function KataOrang() {
   const [index, setIndex] = useState(4);
@@ -12,23 +13,6 @@ function KataOrang() {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
-
-  const item = [
-    {
-      alt: "Gambar 1",
-      capt: [
-        "Edwin",
-        "Bagus, karna mereka slalu membuat penemuan yang mengejutkan",
-      ],
-    },
-    {
-      alt: "Gambar 2",
-      capt: [
-        "Luthfi Jatmiko",
-        "Eskulnya santai sih, bercanda juga iya. Bukanya ga serius tapi biar nyaman aja",
-      ],
-    },
-  ];
 
   useEffect(() => {
     const curr = document.querySelector("#KataOrang");
@@ -44,7 +28,7 @@ function KataOrang() {
   return (
     <section id="KataOrang">
       <Carousel activeIndex={index} onSelect={handleSelect}>
-        {item.map((key, i) => (
+        {data.map((key, i) => (
           <Carousel.Item key={i}>
             <img
               className="d-block w-100"
