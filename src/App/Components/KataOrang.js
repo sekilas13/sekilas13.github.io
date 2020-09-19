@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 import data from "../asset/data";
 
 function KataOrang() {
-  const [index, setIndex] = useState(4);
+  const [index, setIndex] = useState(3);
 
   const [ukuran, setUkuran] = useState({
     width: window.innerWidth,
