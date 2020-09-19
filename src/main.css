@@ -4,7 +4,6 @@ html {
 }
 
 #deskripsi,
-#KataOrang,
 .jumbotron {
   height: 100vh;
   background-size: cover;
@@ -16,7 +15,7 @@ html {
 }
 
 .jumbotron .container {
-  margin: -25px auto;
+  margin: -10px auto;
 }
 
 .jumbotron img {
@@ -58,6 +57,14 @@ html {
   color: #011627;
 }
 /* Bagian Akhir Deskripsi */
+
+/* Bagian Awal KataOrang */
+#KataOrang {
+  height: 83vh;
+  background-size: cover;
+}
+
+/* Bagian Akhir KataOrang */
 
 /* Bagian Gambar */
 #gambar {
