@@ -11,7 +11,7 @@ function Deskripsi() {
           </Col>
         </Row>
 
-        <Row className="justify-content-center mt-3">
+        <Row className="justify-content-center mt-3 text-center">
           <Col sm={5}>
             <p>
               Kir adalah salah satu ekstrakurikuler di{" "}

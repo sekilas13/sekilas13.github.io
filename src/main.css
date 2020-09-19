@@ -39,7 +39,7 @@ html {
 
 /* Bagian deskripsi eskul */
 #deskripsi {
-  background-image: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  background-color: #fdfffc;
 }
 
 #deskripsi h2 {
