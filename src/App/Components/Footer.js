@@ -15,8 +15,14 @@ function Footer() {
           <Col md={4}>
             <p>
               Dibuat oleh{" "}
-              <a href="https://github.com/sekilas13">Karya Ilmiah Remaja</a> SMP
-              Negeri 13 Bekasi | {new Date().getFullYear()}
+              <a
+                href="https://github.com/sekilas13"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Karya Ilmiah Remaja
+              </a>{" "}
+              SMP Negeri 13 Bekasi | {new Date().getFullYear()}
             </p>
           </Col>
         </Row>
