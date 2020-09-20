@@ -1,9 +1,18 @@
 import React, { useRef, useState } from "react";
-import { Container, Navbar, Nav } from "react-bootstrap";
+import { Container, Navbar, Nav, Form } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSun as SunSolid,
+  faMoon as MoonSolid,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faSun as SunRegular,
+  faMoon as MoonRegular,
+} from "@fortawesome/free-regular-svg-icons";
 
 function Navigasi() {
   const ref = useRef();
-  const [state, setState] = useState({ expanded: false });
+  const [state, setState] = useState({ expanded: false, theme: "dark" });
 
   const handleBrand = (e) => {
     e.preventDefault();
@@ -70,6 +79,32 @@ function Navigasi() {
               </Nav.Link>
             ))}
           </Nav>
+          <Form>
+            <Form.Row className="justify-content-center">
+              <small className="sun">
+                <FontAwesomeIcon
+                  icon={state.theme !== "dark" ? SunSolid : SunRegular}
+                />
+              </small>
+              <Form.Check
+                type="switch"
+                id="custom-switch"
+                onChange={(e) => {
+                  setState({ theme: e.target.checked ? "dark" : "light" });
+                  if (state.expanded) {
+                    setState({ expanded: true });
+                    setTimeout(() => setState({ expanded: false }), 400);
+                  }
+                }}
+                label=""
+              />
+              <small className="moon">
+                <FontAwesomeIcon
+                  icon={state.theme !== "dark" ? MoonRegular : MoonSolid}
+                />
+              </small>
+            </Form.Row>
+          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>

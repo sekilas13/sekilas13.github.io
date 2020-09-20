@@ -9,6 +9,17 @@ html {
   background-size: cover;
 }
 
+/* Untuk tommbol toggle mode gelap di Navbar */
+.sun {
+  padding-top: 3px;
+  padding-right: 7px;
+}
+
+.moon {
+  padding-top: 2.4px;
+}
+/* Akhir tombol toggle */
+
 /* Awal dari Jumbotron */
 .jumbotron {
   background-color: #fff !important;
