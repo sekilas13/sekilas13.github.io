@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
-import data from "../asset/data";
+import data from "../asset/data/Pandangan";
 
 function KataOrang() {
   const [index, setIndex] = useState(3);
