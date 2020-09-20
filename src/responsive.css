@@ -7,7 +7,7 @@
 
 @media (max-width: 576px) {
   .jumbotron .container {
-    margin: 60px auto;
+    margin: 100px auto;
   }
 
   .jumbotron img {
@@ -42,7 +42,7 @@
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .jumbotron .container {
-    margin: 30px auto;
+    margin: 80px auto;
   }
 
   .jumbotron img {
@@ -65,7 +65,7 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .jumbotron .container {
-    margin: -10px auto;
+    margin: 60px auto;
   }
 
   .jumbotron img {
@@ -88,7 +88,7 @@
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .jumbotron .container {
-    margin: -15px auto;
+    margin: 50px auto;
   }
 
   .jumbotron img {
