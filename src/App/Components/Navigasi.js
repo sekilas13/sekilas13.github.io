@@ -12,7 +12,12 @@ import {
 
 function Navigasi() {
   const ref = useRef();
-  const [state, setState] = useState({ expanded: false, theme: "dark" });
+  const [state, UNSAFE_setState] = useState({
+    expanded: false,
+    theme: "light",
+  });
+
+  const setState = (data) => UNSAFE_setState({ ...state, ...data });
 
   const handleBrand = (e) => {
     e.preventDefault();
@@ -89,13 +94,9 @@ function Navigasi() {
               <Form.Check
                 type="switch"
                 id="custom-switch"
-                onChange={(e) => {
-                  setState({ theme: e.target.checked ? "dark" : "light" });
-                  if (state.expanded) {
-                    setState({ expanded: true });
-                    setTimeout(() => setState({ expanded: false }), 400);
-                  }
-                }}
+                onChange={(e) =>
+                  setState({ theme: e.target.checked ? "dark" : "light" })
+                }
                 label=""
               />
               <small className="moon">
