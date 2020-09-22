@@ -17,10 +17,12 @@ html {
 .sun {
   padding-top: 3px;
   padding-right: 7px;
+  color: yellow;
 }
 
 .moon {
   padding-top: 2.4px;
+  color: blue;
 }
 /* Navbar akhir */
 
@@ -49,13 +51,8 @@ html {
 /* End of Jumbotron */
 
 /* Bagian deskripsi eskul */
-#deskripsi {
-  background-color: #fdfffc;
-}
-
 #deskripsi h2 {
   font-weight: 500;
-  color: #353535;
   font-family: "Kufam", cursive;
 }
 
@@ -65,7 +62,6 @@ html {
 
 #deskripsi p {
   font-size: 1.3rem;
-  color: #011627;
 }
 /* Bagian Akhir Deskripsi */
 
@@ -74,7 +70,6 @@ html {
   height: 83vh;
   background-size: cover;
 }
-
 /* Bagian Akhir KataOrang */
 
 /* Bagian Gambar */

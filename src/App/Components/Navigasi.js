@@ -11,7 +11,7 @@ import {
   faMoon as MoonRegular,
 } from "@fortawesome/free-regular-svg-icons";
 
-function Navigasi({ t, tToggler }) {
+function Navigasi({ tToggler }) {
   const ref = useRef();
   const [theme, themeToggler, mountedComponent] = useDarkMode();
   const [state, UNSAFE_setState] = useState({

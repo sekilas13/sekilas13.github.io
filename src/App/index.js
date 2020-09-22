@@ -43,12 +43,13 @@ function App() {
       </div>
     );
   } else {
+    window.scrollTo(0, 0);
     return (
       <ThemeProvider theme={themeMode}>
         <Fragment>
           <GlobalStyles />
           <SimpleReactLightbox>
-            <Navigasi t={state.theme} tToggler={setState} />
+            <Navigasi tToggler={setState} />
             <JumbotronTop />
             <Deskripsi />
             <KataOrang />
