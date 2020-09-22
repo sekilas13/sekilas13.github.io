@@ -1,6 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, Fragment, useEffect } from "react";
 import { Container, Navbar, Nav, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useDarkMode } from "../hooks/useDarkMode";
 import {
   faSun as SunSolid,
   faMoon as MoonSolid,
@@ -10,14 +11,19 @@ import {
   faMoon as MoonRegular,
 } from "@fortawesome/free-regular-svg-icons";
 
-function Navigasi() {
+function Navigasi({ t, tToggler }) {
   const ref = useRef();
+  const [theme, themeToggler, mountedComponent] = useDarkMode();
   const [state, UNSAFE_setState] = useState({
     expanded: false,
-    theme: "light",
   });
 
   const setState = (data) => UNSAFE_setState({ ...state, ...data });
+
+  useEffect(() => {
+    if (mountedComponent) tToggler({ theme });
+    // eslint-disable-next-line
+  }, [theme]);
 
   const handleBrand = (e) => {
     e.preventDefault();
@@ -56,10 +62,11 @@ function Navigasi() {
     { nama: "Gambar", to: "#gambar" },
   ];
 
+  if (!mountedComponent) return <Fragment />;
   return (
     <Navbar
-      bg="light"
-      variant="light"
+      bg={theme}
+      variant={theme}
       sticky="top"
       expand="lg"
       expanded={state.expanded}
@@ -88,20 +95,19 @@ function Navigasi() {
             <Form.Row className="justify-content-center">
               <small className="sun">
                 <FontAwesomeIcon
-                  icon={state.theme !== "dark" ? SunSolid : SunRegular}
+                  icon={theme !== "dark" ? SunSolid : SunRegular}
                 />
               </small>
               <Form.Check
                 type="switch"
                 id="custom-switch"
-                onChange={(e) =>
-                  setState({ theme: e.target.checked ? "dark" : "light" })
-                }
+                checked={theme === "light" ? false : true}
+                onChange={themeToggler}
                 label=""
               />
               <small className="moon">
                 <FontAwesomeIcon
-                  icon={state.theme !== "dark" ? MoonRegular : MoonSolid}
+                  icon={theme !== "dark" ? MoonRegular : MoonSolid}
                 />
               </small>
             </Form.Row>

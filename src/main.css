@@ -25,10 +25,6 @@ html {
 /* Navbar akhir */
 
 /* Awal dari Jumbotron */
-.jumbotron {
-  background-color: #fff !important;
-}
-
 .jumbotron .container {
   margin: 20px auto;
 }
