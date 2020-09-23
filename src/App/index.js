@@ -43,7 +43,6 @@ function App() {
       </div>
     );
   } else {
-    window.scrollTo(0, 0);
     return (
       <ThemeProvider theme={themeMode}>
         <Fragment>
