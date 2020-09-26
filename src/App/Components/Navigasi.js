@@ -1,4 +1,4 @@
-import React, { useRef, useState, Fragment, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Container, Navbar, Nav, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDarkMode } from "../hooks/useDarkMode";
@@ -62,7 +62,6 @@ function Navigasi({ tToggler }) {
     { nama: "Gambar", to: "#gambar" },
   ];
 
-  if (!mountedComponent) return <Fragment />;
   return (
     <Navbar
       bg={theme}

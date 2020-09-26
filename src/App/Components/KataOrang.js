@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Carousel } from "react-bootstrap";
 import data from "../assets/data/Pandangan";
 
-function KataOrang() {
+function KataOrang({ theme }) {
   const [index, setIndex] = useState(3);
 
   const [ukuran, setUkuran] = useState({
@@ -32,12 +32,18 @@ function KataOrang() {
           <Carousel.Item key={i}>
             <img
               className="d-block w-100"
-              src={`https://dummyimage.com/${ukuran.width}x${ukuran.height}/373940/fff&text=+`}
+              src={`https://dummyimage.com/${ukuran.width}x${ukuran.height}/${
+                theme === "light" ? "fdfcdc" : "373940"
+              }/fff&text=+`}
               alt={key.alt}
             />
             <Carousel.Caption>
-              <h3>{key.capt[0]}</h3>
-              <p>{key.capt[1]}</p>
+              <h3 style={{ color: theme === "light" ? "000" : "fff" }}>
+                {key.capt[0]}
+              </h3>
+              <p style={{ color: theme === "light" ? "000" : "fff" }}>
+                {key.capt[1]}
+              </p>
             </Carousel.Caption>
           </Carousel.Item>
         ))}

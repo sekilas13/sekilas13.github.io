@@ -26,4 +26,8 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.deskripsi.p};
     transition: all 0.50s linear;
   }
+
+  .carousel-caption {
+    color: ${({ theme }) => theme.carousel.color};
+  }
   `;

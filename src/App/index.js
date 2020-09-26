@@ -51,7 +51,7 @@ function App() {
             <Navigasi tToggler={setState} />
             <JumbotronTop />
             <Deskripsi />
-            <KataOrang />
+            <KataOrang theme={state.theme} />
             <Gambar />
             <Footer />
           </SimpleReactLightbox>
