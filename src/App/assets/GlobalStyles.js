@@ -65,8 +65,6 @@ export const GlobalStyles = createGlobalStyle`
       ${({ theme }) => theme.gambar.bg} 35%,
       ${({ theme }) => theme.gambar.bg} 100%
     );
-    height: 100vh;
-    background-size: cover;
     transition: all 0.50s linear;
   }
   `;

@@ -76,6 +76,12 @@ html {
 }
 /* Bagian Akhir KataOrang */
 
+#gambar {
+  height: 100vh;
+  background-size: cover;
+}
+/* Bagian akhir gambar */
+
 footer {
   padding-top: 20px;
   height: 20vh;
