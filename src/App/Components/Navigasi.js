@@ -64,8 +64,9 @@ function Navigasi({ tToggler }) {
 
   return (
     <Navbar
-      bg={theme}
+      bg={theme === "light" && theme}
       variant={theme}
+      className={theme === "dark" && "navbar-custom"}
       sticky="top"
       expand="lg"
       expanded={state.expanded}

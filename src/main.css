@@ -3,6 +3,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.navbar-custom {
+  background-color: #333533;
+}
+
 #deskripsi,
 .jumbotron {
   height: 100vh;

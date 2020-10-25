@@ -33,7 +33,7 @@ function KataOrang({ theme }) {
             <img
               className="d-block w-100"
               src={`https://dummyimage.com/${ukuran.width}x${ukuran.height}/${
-                theme === "light" ? "fdfcdc" : "373940"
+                theme === "light" ? "f1faee" : "373940"
               }/fff&text=+`}
               alt={key.alt}
             />

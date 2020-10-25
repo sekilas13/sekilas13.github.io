@@ -9,20 +9,24 @@ export const lightTheme = {
   },
   carousel: {
     color: "#000",
+    indicator: "#242423",
+    arrow: "333533",
   },
 };
 
 export const darkTheme = {
   jumbotron: {
-    bg: "#0b090a",
+    bg: "#242423",
     color: "#fffcf2",
   },
   deskripsi: {
-    bg: "#001524",
+    bg: "#161a1d",
     h2: "#f8f9fa",
     p: "#eaeaea",
   },
   carousel: {
     color: "#fff",
+    indicator: "#fff",
+    arrow: "fff",
   },
 };
