@@ -76,9 +76,14 @@ html {
 }
 /* Bagian Akhir KataOrang */
 
+/* Bagian awal gambar */
 #gambar {
   height: 100vh;
   background-size: cover;
+}
+
+#gambar img {
+  cursor: pointer;
 }
 /* Bagian akhir gambar */
 
