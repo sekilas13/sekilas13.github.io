@@ -10,7 +10,10 @@ export const lightTheme = {
   carousel: {
     color: "#000",
     indicator: "#242423",
-    arrow: "#333533",
+    arrow: "333533",
+  },
+  gambar: {
+    bg: "#f8f9fa",
   },
 };
 
@@ -27,6 +30,9 @@ export const darkTheme = {
   carousel: {
     color: "#fff",
     indicator: "#fff",
-    arrow: "#fff",
+    arrow: "fff",
+  },
+  gambar: {
+    bg: "#2b2d42",
   },
 };
