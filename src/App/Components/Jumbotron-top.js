@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import LogoSakral from "../assets/Img/KIR.png";
 import { useSpring, useTransition, animated } from "react-spring";
 import { Row, Jumbotron, Container } from "react-bootstrap";
