@@ -1,4 +1,4 @@
-export default [
+const Pandangan = [
   {
     alt: "Gambar background Edwin 1",
     capt: [
@@ -46,3 +46,5 @@ export default [
     ],
   },
 ];
+
+export default Pandangan;

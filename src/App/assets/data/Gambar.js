@@ -5,7 +5,7 @@ import img4 from "../Img/4.jpg";
 import img5 from "../Img/5.jpg";
 import img6 from "../Img/6.jpg";
 
-export default [
+const ListGambar = [
   {
     src: img1,
     alt: "Demonstrasi roket air pada saat pengenalan eskul",
@@ -33,3 +33,5 @@ export default [
     alt: "Anggota eksperimen sedang menyiapkan bahan dan alat",
   },
 ];
+
+export default ListGambar;
