@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useContext } from "react";
 import { Container, Navbar, Nav, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDarkMode } from "../hooks/useDarkMode";
@@ -10,20 +10,20 @@ import {
   faSun as SunRegular,
   faMoon as MoonRegular,
 } from "@fortawesome/free-regular-svg-icons";
+import { Context } from "../utils/stateProvider";
+import { observer } from "mobx-react";
 
-function Navigasi({ tToggler }) {
+function Navigasi() {
+  const store = useContext(Context);
   const ref = useRef();
-  const [theme, themeToggler, mountedComponent] = useDarkMode();
+  const [themeToggler] = useDarkMode();
   const [state, UNSAFE_setState] = useState({
     expanded: false,
   });
 
-  const setState = (data) => UNSAFE_setState({ ...state, ...data });
+  const theme = store.theme;
 
-  useEffect(() => {
-    if (mountedComponent) tToggler({ theme });
-    // eslint-disable-next-line
-  }, [theme]);
+  const setState = (data) => UNSAFE_setState({ ...state, ...data });
 
   const handleBrand = (e) => {
     e.preventDefault();
@@ -118,4 +118,4 @@ function Navigasi({ tToggler }) {
   );
 }
 
-export default Navigasi;
+export default observer(Navigasi);

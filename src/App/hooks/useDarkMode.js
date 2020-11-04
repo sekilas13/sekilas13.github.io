@@ -1,21 +1,22 @@
-import { useEffect, useState } from "react";
+import { useEffect, useContext } from "react";
+import { Context } from "../utils/stateProvider";
+
 export const useDarkMode = () => {
-  const [theme, setTheme] = useState("light");
-  const [mountedComponent, setMountedComponent] = useState(false);
+  const store = useContext(Context);
   const setMode = (mode) => {
     window.localStorage.setItem("theme", mode);
-    setTheme(mode);
+    store.setTheme(mode);
   };
 
   const themeToggler = () => {
-    theme === "light" ? setMode("dark") : setMode("light");
+    store.theme === "light" ? setMode("dark") : setMode("light");
   };
 
   useEffect(() => {
     const localTheme = window.localStorage.getItem("theme");
-    localTheme ? setTheme(localTheme) : setMode("light");
-    setMountedComponent(true);
+    localTheme ? store.setTheme(localTheme) : setMode("light");
+    // eslint-disable-next-line
   }, []);
 
-  return [theme, themeToggler, mountedComponent];
+  return [themeToggler];
 };

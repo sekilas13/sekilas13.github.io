@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Carousel } from "react-bootstrap";
+import { Context } from "../utils/stateProvider";
 import data from "../assets/data/Pandangan";
 
-function KataOrang({ theme }) {
+function KataOrang() {
+  const store = useContext(Context);
   const [index, setIndex] = useState(3);
 
   const [ukuran, setUkuran] = useState({
@@ -33,15 +35,15 @@ function KataOrang({ theme }) {
             <img
               className="d-block w-100"
               src={`https://dummyimage.com/${ukuran.width}x${ukuran.height}/${
-                theme === "light" ? "f1faee" : "373940"
+                store.theme === "light" ? "f1faee" : "373940"
               }/fff&text=+`}
               alt={key.alt}
             />
             <Carousel.Caption>
-              <h3 style={{ color: theme === "light" ? "000" : "fff" }}>
+              <h3 style={{ color: store.theme === "light" ? "000" : "fff" }}>
                 {key.capt[0]}
               </h3>
-              <p style={{ color: theme === "light" ? "000" : "fff" }}>
+              <p style={{ color: store.theme === "light" ? "000" : "fff" }}>
                 {key.capt[1]}
               </p>
             </Carousel.Caption>

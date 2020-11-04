@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./assets/Theme";
 import { GlobalStyles } from "./assets/GlobalStyles";
@@ -11,22 +11,21 @@ import {
   Footer,
 } from "./Components";
 import SimpleReactLightbox from "simple-react-lightbox";
+import { Context } from "./utils/stateProvider";
+import { observer } from "mobx-react";
 
 function App() {
-  const [state, UNSAFE_setState] = useState({
-    theme: "light",
-    mountedComponent: false,
-  });
-  const setState = (data) => UNSAFE_setState({ ...state, ...data });
+  const store = useContext(Context);
+  const [mountedComponent, SET_mountedComponent] = useState(false);
 
   useEffect(() => {
-    setState({ mountedComponent: true });
+    SET_mountedComponent(true);
     // eslint-disable-next-line
   }, []);
 
-  const themeMode = state.theme === "light" ? lightTheme : darkTheme;
+  const themeMode = store.theme === "light" ? lightTheme : darkTheme;
 
-  if (!state.mountedComponent) {
+  if (!mountedComponent) {
     return (
       <div className="row justify-content-center mt-5">
         <div
@@ -48,10 +47,10 @@ function App() {
         <Fragment>
           <GlobalStyles />
           <SimpleReactLightbox>
-            <Navigasi tToggler={setState} />
+            <Navigasi />
             <JumbotronTop />
             <Deskripsi />
-            <KataOrang theme={state.theme} />
+            <KataOrang />
             <Gambar />
             <Footer />
           </SimpleReactLightbox>
@@ -61,4 +60,4 @@ function App() {
   }
 }
 
-export default App;
+export default observer(App);
