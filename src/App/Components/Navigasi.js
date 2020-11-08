@@ -10,7 +10,7 @@ import {
   faSun as SunRegular,
   faMoon as MoonRegular,
 } from "@fortawesome/free-regular-svg-icons";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import { Context } from "../utils/stateProvider";
 import { observer } from "mobx-react";
 
@@ -23,7 +23,7 @@ function Navigasi() {
   });
 
   const location = useLocation();
-  console.log(location);
+  const history = useHistory();
 
   const theme = store.theme;
 
@@ -42,6 +42,8 @@ function Navigasi() {
       } else {
         window.scrollTo(0, 0);
       }
+    } else {
+      history.push("/");
     }
   };
 
@@ -88,16 +90,17 @@ function Navigasi() {
         <Navbar.Toggle aria-controls="navigasi-nav" />
         <Navbar.Collapse id="navigasi-nav">
           <Nav className="ml-auto text-center">
-            {Link.main.map((link, i) => (
-              <Nav.Link
-                key={i}
-                href={link.to}
-                id={link.to}
-                onClick={handleLink}
-              >
-                {link.nama}
-              </Nav.Link>
-            ))}
+            {location.pathname === "/" &&
+              Link.main.map((link, i) => (
+                <Nav.Link
+                  key={i}
+                  href={link.to}
+                  id={link.to}
+                  onClick={handleLink}
+                >
+                  {link.nama}
+                </Nav.Link>
+              ))}
           </Nav>
           <Form>
             <Form.Row className="justify-content-center">
