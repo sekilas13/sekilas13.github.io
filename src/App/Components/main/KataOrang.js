@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { Carousel } from "react-bootstrap";
-import { Context } from "../utils/stateProvider";
-import data from "../assets/data/Pandangan";
+import { Context } from "../../utils/stateProvider";
+import data from "../../assets/data/Pandangan";
 
 function KataOrang() {
   const store = useContext(Context);
@@ -21,10 +21,16 @@ function KataOrang() {
     const Ubah = { width: curr.offsetWidth, height: curr.offsetHeight };
     setUkuran(Object.assign({}, Ubah));
 
-    window.addEventListener("resize", function () {
+    function resize() {
       const forUbah = { width: curr.offsetWidth, height: curr.offsetHeight };
       setUkuran(Object.assign({}, forUbah));
-    });
+    }
+
+    window.addEventListener("resize", resize);
+
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
   }, []);
 
   return (

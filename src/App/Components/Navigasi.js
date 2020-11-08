@@ -10,6 +10,7 @@ import {
   faSun as SunRegular,
   faMoon as MoonRegular,
 } from "@fortawesome/free-regular-svg-icons";
+import { useLocation } from "react-router-dom";
 import { Context } from "../utils/stateProvider";
 import { observer } from "mobx-react";
 
@@ -21,21 +22,26 @@ function Navigasi() {
     expanded: false,
   });
 
+  const location = useLocation();
+  console.log(location);
+
   const theme = store.theme;
 
   const setState = (data) => UNSAFE_setState({ ...state, ...data });
 
   const handleBrand = (e) => {
     e.preventDefault();
-    const Links = document.querySelectorAll(".nav-link");
-    Links.forEach((el) => {
-      el.classList.remove("active");
-    });
-    if (state.expanded) {
-      setState({ expanded: false });
-      setTimeout(() => window.scrollTo(0, 0), 150);
-    } else {
-      window.scrollTo(0, 0);
+    if (location.pathname === "/") {
+      const Links = document.querySelectorAll(".nav-link");
+      Links.forEach((el) => {
+        el.classList.remove("active");
+      });
+      if (state.expanded) {
+        setState({ expanded: false });
+        setTimeout(() => window.scrollTo(0, 0), 150);
+      } else {
+        window.scrollTo(0, 0);
+      }
     }
   };
 
@@ -56,11 +62,13 @@ function Navigasi() {
     }
   };
 
-  const Link = [
-    { nama: "Deskripsi", to: "#deskripsi" },
-    { nama: "Pandangan Orang", to: "#KataOrang" },
-    { nama: "Gambar", to: "#gambar" },
-  ];
+  const Link = {
+    main: [
+      { nama: "Deskripsi", to: "#deskripsi" },
+      { nama: "Pandangan Orang", to: "#KataOrang" },
+      { nama: "Gambar", to: "#gambar" },
+    ],
+  };
 
   return (
     <Navbar
@@ -80,7 +88,7 @@ function Navigasi() {
         <Navbar.Toggle aria-controls="navigasi-nav" />
         <Navbar.Collapse id="navigasi-nav">
           <Nav className="ml-auto text-center">
-            {Link.map((link, i) => (
+            {Link.main.map((link, i) => (
               <Nav.Link
                 key={i}
                 href={link.to}

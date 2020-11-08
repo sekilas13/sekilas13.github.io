@@ -2,14 +2,9 @@ import { Fragment, useContext, useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./assets/Theme";
 import { GlobalStyles } from "./assets/GlobalStyles";
-import {
-  Navigasi,
-  JumbotronTop,
-  Deskripsi,
-  KataOrang,
-  Gambar,
-  Footer,
-} from "./Components";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import Main from "./Components/main";
+import Navigasi from "./Components/Navigasi";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { Context } from "./utils/stateProvider";
 import { observer } from "mobx-react";
@@ -47,12 +42,12 @@ function App() {
         <Fragment>
           <GlobalStyles />
           <SimpleReactLightbox>
-            <Navigasi />
-            <JumbotronTop />
-            <Deskripsi />
-            <KataOrang />
-            <Gambar />
-            <Footer />
+            <Router basename={process.env.PUBLIC_URL}>
+              <Navigasi />
+              <Switch>
+                <Route exact path="/" component={Main} />
+              </Switch>
+            </Router>
           </SimpleReactLightbox>
         </Fragment>
       </ThemeProvider>

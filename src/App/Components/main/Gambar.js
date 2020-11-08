@@ -1,6 +1,6 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { SRLWrapper } from "simple-react-lightbox";
-import gambar from "../assets/data/Gambar";
+import gambar from "../../assets/data/Gambar";
 
 function Gambar() {
   return (
