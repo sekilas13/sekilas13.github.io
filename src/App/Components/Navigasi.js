@@ -1,4 +1,4 @@
-import { useRef, useState, useContext } from "react";
+import { useRef, useState, useContext, Fragment } from "react";
 import { Container, Navbar, Nav, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDarkMode } from "../hooks/useDarkMode";
@@ -10,7 +10,7 @@ import {
   faSun as SunRegular,
   faMoon as MoonRegular,
 } from "@fortawesome/free-regular-svg-icons";
-import { useLocation, useHistory } from "react-router-dom";
+import { useLocation, useHistory, Link as SPALink } from "react-router-dom";
 import { Context } from "../utils/stateProvider";
 import { observer } from "mobx-react";
 
@@ -90,17 +90,24 @@ function Navigasi() {
         <Navbar.Toggle aria-controls="navigasi-nav" />
         <Navbar.Collapse id="navigasi-nav">
           <Nav className="ml-auto text-center">
-            {location.pathname === "/" &&
-              Link.main.map((link, i) => (
-                <Nav.Link
-                  key={i}
-                  href={link.to}
-                  id={link.to}
-                  onClick={handleLink}
-                >
-                  {link.nama}
+            {location.pathname === "/" && (
+              <Fragment>
+                <Nav.Link as={SPALink} to="/covid">
+                  Informasi Covid 19
                 </Nav.Link>
-              ))}
+
+                {Link.main.map((link, i) => (
+                  <Nav.Link
+                    key={i}
+                    href={link.to}
+                    id={link.to}
+                    onClick={handleLink}
+                  >
+                    {link.nama}
+                  </Nav.Link>
+                ))}
+              </Fragment>
+            )}
           </Nav>
           <Form>
             <Form.Row className="justify-content-center">
