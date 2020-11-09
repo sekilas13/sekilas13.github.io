@@ -4,6 +4,7 @@ import { lightTheme, darkTheme } from "./assets/Theme";
 import { GlobalStyles } from "./assets/GlobalStyles";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Main from "./Components/main";
+import Covid from "./Components/covid";
 import Navigasi from "./Components/Navigasi";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { Context } from "./utils/stateProvider";
@@ -46,6 +47,7 @@ function App() {
               <Navigasi />
               <Switch>
                 <Route exact path="/" component={Main} />
+                <Route path="/covid" component={Covid} />
               </Switch>
             </Router>
           </SimpleReactLightbox>
