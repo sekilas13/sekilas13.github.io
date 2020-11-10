@@ -7,15 +7,15 @@ import axios from "axios";
 function Covid() {
   const store = useContext(Context);
 
-  const set = useCallback((data, index) => store.setDataCovid(data, index), [
-    store,
-  ]);
+  const set = useCallback((data, index) => store.setData(data, index), [store]);
 
   useEffect(() => {
     axios
       .get("https://indonesia-covid-19.mathdro.id/api/")
       .then((data) => data.data)
-      .then((r) => set(r, "main"));
+      .then(({ perawatan, sembuh, meninggal, jumlahKasus, lastUpdate }) =>
+        set({ perawatan, sembuh, meninggal, jumlahKasus, lastUpdate }, "Main")
+      );
   }, [set]);
 
   return (
