@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import { observer } from "mobx-react";
 import Tabel from "./Tabel";
 import "./covid.css";
+import "./responsive.css";
 import Card from "./Card";
 import axios from "axios";
 
