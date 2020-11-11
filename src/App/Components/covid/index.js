@@ -1,5 +1,6 @@
-import { Fragment, useEffect, useContext, useCallback } from "react";
+import { useEffect, useContext, useCallback } from "react";
 import { Context } from "../../utils/stateProvider";
+import { Container } from "react-bootstrap";
 import { observer } from "mobx-react";
 import Card from "./Card";
 import axios from "axios";
@@ -19,9 +20,11 @@ function Covid() {
   }, [set]);
 
   return (
-    <Fragment>
-      <Card />
-    </Fragment>
+    <section className="covid">
+      <Container fluid>
+        <Card />
+      </Container>
+    </section>
   );
 }
 
