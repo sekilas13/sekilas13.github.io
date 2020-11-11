@@ -9,16 +9,32 @@ function Tabel() {
 
   return (
     <Fragment>
-      {prov && (
-        <Table striped bordered variant={store.theme}>
+      {store.dataMain && prov && (
+        <Table striped bordered hover responsive variant={store.theme}>
           <thead>
             <tr>
               <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Username</th>
+              <th>Provinsi</th>
+              <th>Positif</th>
+              <th>Dirawat</th>
+              <th>Sembuh</th>
             </tr>
           </thead>
+          <tbody>
+            {prov.map((d, i) => {
+              if (d.provinsi !== "Indonesia") {
+                return (
+                  <tr key={d.kodeProvi}>
+                    <td>{i + 1}</td>
+                    <td>{d.provinsi}</td>
+                    <td>{d.kasusPosi.toLocaleString()}</td>
+                    <td>{d.kasusSemb.toLocaleString()}</td>
+                    <td>{d.kasusMeni.toLocaleString()}</td>
+                  </tr>
+                );
+              }
+            })}
+          </tbody>
         </Table>
       )}
     </Fragment>
