@@ -4,8 +4,20 @@
   }
 }
 
+/* @media (min-width: 586px) and (max-width: 662px) {
+  .covid .card {
+    height: 260px;
+  }
+} */
+
 @media (min-width: 576px) and (max-width: 991px) {
   .covid .card {
     margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1170px) {
+  .covid .card svg {
+    font-size: 5em;
   }
 }
