@@ -52,7 +52,7 @@ function Card() {
               />
             </Col>
           </Row>
-          <Row className="mt-1">
+          <Row className="mt-2">
             <Col>
               <p>
                 Terakhir data diperbarui tanggal {time.getDate()}{" "}
