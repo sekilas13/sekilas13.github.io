@@ -75,6 +75,10 @@ function Navigasi() {
       { nama: "Pandangan Orang", to: "#KataOrang" },
       { nama: "Gambar", to: "#gambar" },
     ],
+    covid: [
+      { nama: "Kondisi Terkini", to: "#all" },
+      { nama: "Data Provinsi", to: "#provinsi" },
+    ],
   };
 
   return (
@@ -108,6 +112,30 @@ function Navigasi() {
                 </Nav.Link>
 
                 {Link.main.map((link, i) => (
+                  <Nav.Link
+                    key={i}
+                    href={link.to}
+                    id={link.to}
+                    onClick={handleLink}
+                  >
+                    {link.nama}
+                  </Nav.Link>
+                ))}
+              </Fragment>
+            )}
+            {location.pathname === "/covid" && (
+              <Fragment>
+                <Nav.Link
+                  as={SPALink}
+                  to="/"
+                  onClick={() =>
+                    state.expanded && setState({ expanded: false })
+                  }
+                >
+                  Halaman Utama
+                </Nav.Link>
+
+                {Link.covid.map((link, i) => (
                   <Nav.Link
                     key={i}
                     href={link.to}
