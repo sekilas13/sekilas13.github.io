@@ -1,0 +1,11 @@
+@media (min-width: 474px) and (max-width: 575px) {
+  .covid .card {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .covid .card {
+    margin-bottom: 10px;
+  }
+}
