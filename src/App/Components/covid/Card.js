@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { Context } from "../../utils/stateProvider";
 import { observer } from "mobx-react";
-import { Card as CardBootstrap, Row, Container, Col } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Row, Container, Col } from "react-bootstrap";
+import CardWrapper from "./custom/CardWrapper";
 import {
   faVirus,
   faHospital,
@@ -20,64 +20,32 @@ function Card() {
         {main && (
           <Row className="mt-4 justify-content-center">
             <Col md={3} sm={5}>
-              <CardBootstrap>
-                <CardBootstrap.Body>
-                  <Row className="justify-content-center h-100 d-flex">
-                    <Col md={4} className="text-center align-self-center">
-                      <FontAwesomeIcon icon={faVirus} size="6x" />
-                    </Col>
-                    <Col md={8} className="text-center align-self-center">
-                      <h4>Positif</h4>
-                      <h3>{main.jumlahKasus.toLocaleString()} Orang</h3>
-                    </Col>
-                  </Row>
-                </CardBootstrap.Body>
-              </CardBootstrap>
+              <CardWrapper
+                label="Positif"
+                data={main.jumlahKasus}
+                icon={faVirus}
+              />
             </Col>
             <Col md={3} sm={5}>
-              <CardBootstrap>
-                <CardBootstrap.Body>
-                  <Row className="justify-content-center h-100 d-flex">
-                    <Col md={4} className="text-center align-self-center">
-                      <FontAwesomeIcon icon={faHospital} size="6x" />
-                    </Col>
-                    <Col md={8} className="text-center align-self-center">
-                      <h4>Dirawat</h4>
-                      <h3>{main.perawatan.toLocaleString()} Orang</h3>
-                    </Col>
-                  </Row>
-                </CardBootstrap.Body>
-              </CardBootstrap>
+              <CardWrapper
+                label="Dirawat"
+                data={main.perawatan}
+                icon={faHospital}
+              />
             </Col>
             <Col md={3} sm={5}>
-              <CardBootstrap>
-                <CardBootstrap.Body>
-                  <Row className="justify-content-center h-100 d-flex">
-                    <Col md={4} className="text-center align-self-center">
-                      <FontAwesomeIcon icon={faHandHoldingMedical} size="6x" />
-                    </Col>
-                    <Col md={8} className="text-center align-self-center">
-                      <h4>Sembuh</h4>
-                      <h3>{main.sembuh.toLocaleString()} Orang</h3>
-                    </Col>
-                  </Row>
-                </CardBootstrap.Body>
-              </CardBootstrap>
+              <CardWrapper
+                label="Sembuh"
+                data={main.sembuh}
+                icon={faHandHoldingMedical}
+              />
             </Col>
             <Col md={3} sm={5}>
-              <CardBootstrap>
-                <CardBootstrap.Body>
-                  <Row className="justify-content-center h-100 d-flex">
-                    <Col md={4} className="text-center align-self-center">
-                      <FontAwesomeIcon icon={faSkullCrossbones} size="6x" />
-                    </Col>
-                    <Col md={8} className="text-center align-self-center">
-                      <h4>Meninggal</h4>
-                      <h3>{main.meninggal.toLocaleString()} Orang</h3>
-                    </Col>
-                  </Row>
-                </CardBootstrap.Body>
-              </CardBootstrap>
+              <CardWrapper
+                label="Meninggal"
+                data={main.meninggal}
+                icon={faSkullCrossbones}
+              />
             </Col>
           </Row>
         )}
