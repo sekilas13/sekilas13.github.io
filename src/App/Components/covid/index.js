@@ -2,7 +2,8 @@ import { useEffect, useContext, useCallback } from "react";
 import { Context } from "../../utils/stateProvider";
 import { Container } from "react-bootstrap";
 import { observer } from "mobx-react";
-import './covid.css'
+import Bagan from "./Bagan";
+import "./covid.css";
 import Card from "./Card";
 import axios from "axios";
 
@@ -18,12 +19,17 @@ function Covid() {
       .then(({ perawatan, sembuh, meninggal, jumlahKasus, lastUpdate }) =>
         set({ perawatan, sembuh, meninggal, jumlahKasus, lastUpdate }, "Main")
       );
+    axios
+      .get("https://indonesia-covid-19.mathdro.id/api/provinsi/")
+      .then((data) => data.data.data)
+      .then((result) => set(result, "Provinsi"));
   }, [set]);
 
   return (
     <section className="covid">
       <Container fluid>
         <Card />
+        <Bagan />
       </Container>
     </section>
   );
