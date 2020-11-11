@@ -1,4 +1,4 @@
-@media (min-width: 474px) and (max-width: 575px) {
+@media (max-width: 575px) {
   .covid .card {
     margin-bottom: 10px;
   }
