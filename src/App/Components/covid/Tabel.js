@@ -3,7 +3,7 @@ import { Context } from "../../utils/stateProvider";
 import { Table } from "react-bootstrap";
 import { observer } from "mobx-react";
 
-function Bagan() {
+function Tabel() {
   const store = useContext(Context);
   const prov = store.dataProvinsi;
 
@@ -25,4 +25,4 @@ function Bagan() {
   );
 }
 
-export default observer(Bagan);
+export default observer(Tabel);

@@ -2,7 +2,7 @@ import { useEffect, useContext, useCallback } from "react";
 import { Context } from "../../utils/stateProvider";
 import { Container } from "react-bootstrap";
 import { observer } from "mobx-react";
-import Bagan from "./Bagan";
+import Tabel from "./Tabel";
 import "./covid.css";
 import Card from "./Card";
 import axios from "axios";
@@ -29,7 +29,7 @@ function Covid() {
     <section className="covid">
       <Container fluid>
         <Card />
-        <Bagan />
+        <Tabel />
       </Container>
     </section>
   );
