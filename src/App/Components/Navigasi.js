@@ -43,7 +43,12 @@ function Navigasi() {
         window.scrollTo(0, 0);
       }
     } else {
-      history.push("/");
+      if (state.expanded) {
+        setState({ expanded: false });
+        setTimeout(() => history.push("/"), 300);
+      } else {
+        history.push("/");
+      }
     }
   };
 
@@ -92,7 +97,13 @@ function Navigasi() {
           <Nav className="ml-auto text-center">
             {location.pathname === "/" && (
               <Fragment>
-                <Nav.Link as={SPALink} to="/covid">
+                <Nav.Link
+                  as={SPALink}
+                  to="/covid"
+                  onClick={() =>
+                    state.expanded && setState({ expanded: false })
+                  }
+                >
                   Informasi Covid 19
                 </Nav.Link>
 
