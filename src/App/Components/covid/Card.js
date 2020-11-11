@@ -1,5 +1,6 @@
 import { useContext, Fragment } from "react";
 import { Context } from "../../utils/stateProvider";
+import konversiBulan from "../../utils/konversiBulan";
 import { observer } from "mobx-react";
 import { Row, Col } from "react-bootstrap";
 import CardWrapper from "./custom/CardWrapper";
@@ -55,7 +56,7 @@ function Card() {
             <Col>
               <p>
                 Terakhir data diperbarui tanggal {time.getDate()}{" "}
-                {time.getMonth()} {time.getFullYear()} Pukul{" "}
+                {konversiBulan(time.getMonth())} {time.getFullYear()} Pukul{" "}
                 {updateTime(time.getHours())}:{updateTime(time.getMinutes())}:
                 {updateTime(time.getSeconds())}.
               </p>
