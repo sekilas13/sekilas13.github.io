@@ -8,7 +8,7 @@ function Tabel() {
   const prov = store.dataProvinsi;
 
   return (
-    <section id="#provinsi">
+    <section id="provinsi">
       {store.dataMain && prov && (
         <Fragment>
           <Row className="justify-content-center mt-4 mb-2">

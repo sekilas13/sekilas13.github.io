@@ -15,7 +15,7 @@ function Card() {
   const main = store.dataMain;
 
   return (
-    <section id="#all">
+    <section id="all">
       {main && (
         <Row className="mt-4 justify-content-center">
           <Col lg={3} sm={5}>
