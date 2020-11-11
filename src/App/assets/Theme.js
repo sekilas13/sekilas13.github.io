@@ -15,6 +15,10 @@ export const lightTheme = {
   gambar: {
     bg: "#f8f9fa",
   },
+  cardCovid: {
+    bg: "#fff",
+    text: "#212529",
+  },
 };
 
 export const darkTheme = {
@@ -34,5 +38,9 @@ export const darkTheme = {
   },
   gambar: {
     bg: "#2b2d42",
+  },
+  cardCovid: {
+    bg: "#212529",
+    text: "#fff",
   },
 };

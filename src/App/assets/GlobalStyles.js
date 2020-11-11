@@ -67,4 +67,14 @@ export const GlobalStyles = createGlobalStyle`
     );
     transition: all 0.50s linear;
   }
+
+  .covid .card {
+    transition: all 0.50s linear;
+    background-color: ${({ theme }) => theme.cardCovid.bg};
+    color: ${({ theme }) => theme.cardCovid.text};
+  }
+
+  .covid h1 {
+    color: ${({ theme }) => theme.cardCovid.text};
+  }
   `;
