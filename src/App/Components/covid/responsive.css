@@ -4,11 +4,11 @@
   }
 }
 
-/* @media (min-width: 586px) and (max-width: 662px) {
+@media (min-width: 586px) and (max-width: 662px) {
   .covid .card {
-    height: 260px;
+    height: 302px;
   }
-} */
+}
 
 @media (min-width: 576px) and (max-width: 991px) {
   .covid .card {
