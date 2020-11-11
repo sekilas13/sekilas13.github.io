@@ -1,4 +1,4 @@
-import { Fragment, useContext } from "react";
+import { useContext } from "react";
 import { Context } from "../../utils/stateProvider";
 import { observer } from "mobx-react";
 import { Row, Col } from "react-bootstrap";
@@ -15,7 +15,7 @@ function Card() {
   const main = store.dataMain;
 
   return (
-    <Fragment>
+    <section id="#all">
       {main && (
         <Row className="mt-4 justify-content-center">
           <Col lg={3} sm={5}>
@@ -48,7 +48,7 @@ function Card() {
           </Col>
         </Row>
       )}
-    </Fragment>
+    </section>
   );
 }
 
