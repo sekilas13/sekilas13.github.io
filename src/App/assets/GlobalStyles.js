@@ -77,4 +77,8 @@ export const GlobalStyles = createGlobalStyle`
   .covid h1 {
     color: ${({ theme }) => theme.cardCovid.text};
   }
+
+  .covid p {
+    color: ${({ theme }) => theme.cardCovid.text};
+  }
   `;
