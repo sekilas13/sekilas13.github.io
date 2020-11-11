@@ -4,8 +4,6 @@ import App from "./App";
 import { Provider } from "./App/utils/stateProvider";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./main.css";
-import "./responsive.css";
 
 import reportWebVitals from "./reportWebVitals";
 

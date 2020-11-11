@@ -4,6 +4,8 @@ import Deskripsi from "./Deskripsi";
 import KataOrang from "./KataOrang";
 import Gambar from "./Gambar";
 import Footer from "./Footer";
+import "./main.css";
+import "./responsive.css";
 
 function Main() {
   return (
