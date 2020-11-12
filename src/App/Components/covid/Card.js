@@ -4,6 +4,7 @@ import konversiBulan from "../../utils/konversiBulan";
 import { observer } from "mobx-react";
 import { Row, Col } from "react-bootstrap";
 import CardWrapper from "./custom/CardWrapper";
+import Loading from "./custom/Loading";
 import {
   faVirus,
   faHospital,
@@ -20,7 +21,7 @@ function Card() {
 
   return (
     <section id="all">
-      {main && (
+      {main ? (
         <Fragment>
           <Row className="mt-4 justify-content-center">
             <Col lg={3} sm={5}>
@@ -63,6 +64,8 @@ function Card() {
             </Col>
           </Row>
         </Fragment>
+      ) : (
+        <Loading />
       )}
     </section>
   );
