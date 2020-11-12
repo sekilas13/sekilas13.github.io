@@ -22,8 +22,8 @@ function Tabel() {
                 <th>#</th>
                 <th>Provinsi</th>
                 <th>Positif</th>
-                <th>Dirawat</th>
                 <th>Sembuh</th>
+                <th>Meninggal</th>
               </tr>
             </thead>
             <tbody>
