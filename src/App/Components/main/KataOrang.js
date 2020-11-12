@@ -40,7 +40,7 @@ function KataOrang() {
           <Carousel.Item key={i}>
             <img
               className="d-block w-100"
-              src={`https://dummyimage.com/${ukuran.width}x${ukuran.height}/${
+              src={`https://via.placeholder.com/${ukuran.width}x${ukuran.height}/${
                 store.theme === "light" ? "f1faee" : "373940"
               }/fff&text=+`}
               alt={key.alt}
