@@ -6,6 +6,7 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Main from "./Components/main";
 import Covid from "./Components/covid";
 import Navigasi from "./Components/Navigasi";
+import NotFound from "./Components/NotFound";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { Context } from "./utils/stateProvider";
 import { observer } from "mobx-react";
@@ -50,6 +51,7 @@ function App() {
               <Switch>
                 <Route exact path="/" component={Main} />
                 <Route path="/covid" component={Covid} />
+                <Route component={NotFound} />
               </Switch>
             </Router>
           </SimpleReactLightbox>
