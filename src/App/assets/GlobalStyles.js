@@ -81,4 +81,13 @@ export const GlobalStyles = createGlobalStyle`
   .covid p {
     color: ${({ theme }) => theme.cardCovid.text};
   }
+  
+  #NotFound {
+    transition: all 0.50s linear;
+    background-color: ${({ theme }) => theme.cardCovid.bg};
+  }
+
+  #NotFound h5, #NotFound p {
+    color: ${({ theme }) => theme.cardCovid.text};
+  }
   `;
