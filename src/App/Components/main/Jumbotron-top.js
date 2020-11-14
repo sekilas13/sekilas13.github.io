@@ -1,7 +1,11 @@
 import { useState, useRef, useEffect } from "react";
-import LogoSakral from "../../assets/Img/normal/KIR.png";
+import LogoSakralPng from "../../assets/Img/normal/KIR.png";
+import LogoSakralWebp from "../../assets/Img/webp/KIR.webp";
 import { useSpring, useTransition, animated } from "react-spring";
 import { Row, Jumbotron, Container } from "react-bootstrap";
+import isSupport from "../../utils/isSupportWebp";
+
+const LogoSakral = isSupport ? LogoSakralWebp : LogoSakralPng;
 
 function JumbotronTop() {
   const ref = useRef();
