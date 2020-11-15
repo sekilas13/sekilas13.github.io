@@ -28,48 +28,41 @@ function JumbotronTop() {
     };
   });
 
-  const fadeIn1 = useSpring({ opacity: 1, from: { opacity: 0 } });
-  const fadeIn2 = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 60 });
-
   return (
     <Jumbotron fluid ref={ref}>
       <Container>
-        <animated.div style={fadeIn1}>
-          <Row className="justify-content-center">
-            <animated.img
-              src={LogoSakral}
-              className="img-fluid text-center rounded"
-              alt="Logo KIR"
-              style={{
-                transform: offset.interpolate(calc),
-                overflow: "hidden",
-              }}
-            />
-          </Row>
-        </animated.div>
-        <animated.div style={fadeIn2}>
-          <Row className="justify-content-center">
-            <animated.h2
-              style={{
-                transform: offset.interpolate(calc2),
-                overflow: "hidden",
-              }}
-              id="tsukilas"
-            >
-              Sekilas !
-            </animated.h2>
-          </Row>
-          <Row className="justify-content-center">
-            <animated.p
-              style={{
-                transform: offset.interpolate(calc3),
-                overflow: "hidden",
-              }}
-            >
-              Semangat KIR Tiga Belas !
-            </animated.p>
-          </Row>
-        </animated.div>
+        <Row className="justify-content-center">
+          <animated.img
+            src={LogoSakral}
+            className="img-fluid text-center rounded"
+            alt="Logo KIR"
+            style={{
+              transform: offset.interpolate(calc),
+              overflow: "hidden",
+            }}
+          />
+        </Row>
+        <Row className="justify-content-center">
+          <animated.h2
+            style={{
+              transform: offset.interpolate(calc2),
+              overflow: "hidden",
+            }}
+            id="tsukilas"
+          >
+            Sekilas !
+          </animated.h2>
+        </Row>
+        <Row className="justify-content-center">
+          <animated.p
+            style={{
+              transform: offset.interpolate(calc3),
+              overflow: "hidden",
+            }}
+          >
+            Semangat KIR Tiga Belas !
+          </animated.p>
+        </Row>
       </Container>
     </Jumbotron>
   );
