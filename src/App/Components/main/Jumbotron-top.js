@@ -1,7 +1,7 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import LogoSakralPng from "../../assets/Img/normal/KIR.png";
 import LogoSakralWebp from "../../assets/Img/webp/KIR.webp";
-import { useSpring, useTransition, animated } from "react-spring";
+import { useSpring, animated } from "react-spring";
 import { Row, Jumbotron, Container } from "react-bootstrap";
 import isSupport from "../../utils/isSupportWebp";
 
@@ -28,36 +28,26 @@ function JumbotronTop() {
     };
   });
 
-  const fadeIn = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 675 });
-
-  const [untukTransisi] = useState(true);
-  const transisi = useTransition(untukTransisi, null, {
-    from: { transform: "translate3d(0,200px,0)", opacity: 0 },
-    enter: { transform: "translate3d(0,0px,0)", opacity: 1 },
-  });
+  const fadeIn1 = useSpring({ opacity: 1, from: { opacity: 0 } });
+  const fadeIn2 = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 60 });
 
   return (
     <Jumbotron fluid ref={ref}>
       <Container>
-        {transisi.map(
-          ({ item, key, props }) =>
-            item && (
-              <animated.div key={key} style={props}>
-                <Row className="justify-content-center">
-                  <animated.img
-                    src={LogoSakral}
-                    className="img-fluid text-center rounded"
-                    alt="Logo KIR"
-                    style={{
-                      transform: offset.interpolate(calc),
-                      overflow: "hidden",
-                    }}
-                  />
-                </Row>
-              </animated.div>
-            )
-        )}
-        <animated.div style={fadeIn}>
+        <animated.div style={fadeIn1}>
+          <Row className="justify-content-center">
+            <animated.img
+              src={LogoSakral}
+              className="img-fluid text-center rounded"
+              alt="Logo KIR"
+              style={{
+                transform: offset.interpolate(calc),
+                overflow: "hidden",
+              }}
+            />
+          </Row>
+        </animated.div>
+        <animated.div style={fadeIn2}>
           <Row className="justify-content-center">
             <animated.h2
               style={{
