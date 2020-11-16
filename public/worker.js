@@ -1,5 +1,9 @@
 const CACHE_NAME = "verr-1";
-const urlToCache = ["index.html", "offline.html"];
+const urlToCache = [
+  "index.html",
+  "offline.html",
+  "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css",
+];
 
 self.addEventListener("install", (event) => {
   evemt.waitUntil(
