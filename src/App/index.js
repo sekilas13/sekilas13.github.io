@@ -9,6 +9,7 @@ import NotFound from "./Components/NotFound";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { Context } from "./utils/stateProvider";
 import { observer } from "mobx-react";
+import "./index.css";
 const Main = lazy(() => import("./Components/main"));
 const Covid = lazy(() => import("./Components/covid"));
 
