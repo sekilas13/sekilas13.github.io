@@ -105,8 +105,15 @@
     >
     <div id="content"></div>
     <script>
-      if('serviceWorker' in navigator) {
-        console.log('ada')
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./worker.js")
+            .then((reg) =>
+              console.log("Berhasil mendaftarkan pwa :", reg.scope)
+            )
+            .catch((err) => console.log("Gagal mendaftarkan pwa : ", err));
+        });
       }
     </script>
   </body>
