@@ -6,7 +6,7 @@ const urlToCache = [
 ];
 
 self.addEventListener("install", (event) => {
-  evemt.waitUntil(
+  event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log("Open cache");
 
@@ -17,7 +17,7 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    cache.match(event.request).then(() => {
+    caches.match(event.request).then(() => {
       return fetch(event.request).catch(() => caches.match("offline.html"));
     })
   );
