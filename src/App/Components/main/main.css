@@ -1,34 +1,8 @@
-html {
-  font-family: "Roboto", sans-serif;
-  scroll-behavior: smooth;
-}
-
-.navbar-custom {
-  background-color: #333533;
-}
-
 #deskripsi,
 .jumbotron {
   height: 100vh;
   background-size: cover;
 }
-
-/* Navbar awal */
-.navbar form {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.sun {
-  padding-top: 3px;
-  padding-right: 7px;
-  color: yellow;
-}
-
-.moon {
-  padding-top: 2.4px;
-  color: blue;
-}
-/* Navbar akhir */
 
 /* Awal dari Jumbotron */
 .jumbotron .container {
