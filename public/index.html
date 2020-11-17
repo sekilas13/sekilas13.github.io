@@ -17,9 +17,16 @@
     <meta name="theme-color" content="#f0efeb" />
 
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Eczar:wght@600&family=Roboto&family=Kufam&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Eczar:wght@600&family=Roboto&family=Kufam&display=swap"
+    /></noscript>
     <link
       rel="apple-touch-icon"
       sizes="60x60"
@@ -90,10 +97,10 @@
       href="%PUBLIC_URL%/favicon-16x16.png"
     />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    
-    <link rel="preconnect" href="https://via.placeholder.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com"/>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
+
+    <link rel="preconnect" href="https://via.placeholder.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 
     <meta
       name="msapplication-TileImage"
