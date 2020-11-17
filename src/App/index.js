@@ -1,4 +1,4 @@
-import { Fragment, useContext, Suspense, lazy } from "react";
+import { Fragment, useContext, useEffect, Suspense, lazy } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./assets/Theme";
 import { GlobalStyles } from "./assets/GlobalStyles";
@@ -17,6 +17,15 @@ function App() {
   const store = useContext(Context);
 
   const themeMode = store.theme === "light" ? lightTheme : darkTheme;
+
+  useEffect(() => {
+    const handleOffline = () => !navigator.onLine && document.location.reload();
+
+    window.addEventListener("offline", handleOffline);
+    return () => {
+      window.removeEventListener("offline", handleOffline);
+    };
+  });
 
   return (
     <Suspense fallback={<Loading />}>
