@@ -3,14 +3,13 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./assets/Theme";
 import { GlobalStyles } from "./assets/GlobalStyles";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import Loading from "./Custom/Loading";
 import Main from "./Components/main";
+import Covid from "./Components/covid";
 import NotFound from "./Components/NotFound";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { Context } from "./utils/stateProvider";
 import { observer } from "mobx-react";
 import "./index.css";
-const Covid = lazy(() => import("./Components/covid"));
 const Navigasi = lazy(() => import("./Components/Navigasi"));
 
 function App() {
@@ -45,9 +44,7 @@ function App() {
             </Suspense>
             <Switch>
               <Route exact path="/" component={Main} />
-              <Suspense fallback={<Loading />}>
-                <Route path="/covid" component={Covid} />
-              </Suspense>
+              <Route path="/covid" component={Covid} />
               <Route component={NotFound} />
             </Switch>
           </Router>
