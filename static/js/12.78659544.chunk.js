@@ -1,0 +1,2 @@
+(this["webpackJsonpkir-13"]=this["webpackJsonpkir-13"]||[]).push([[12],{244:function(e,c,t){"use strict";t.r(c);var n=t(3),s=t(0),i=t(183),a=t(58),r=t(36),j=Object(s.lazy)((function(){return t.e(13).then(t.bind(null,239))}));c.default=function(){return Object(n.jsx)("section",{id:"gambar",children:Object(n.jsx)(s.Suspense,{fallback:Object(n.jsx)(r.a,{}),children:Object(n.jsx)(a.a,{children:Object(n.jsx)(i.a,{className:"pt-4",children:Object(n.jsx)(j,{})})})})})}}}]);
+//# sourceMappingURL=12.78659544.chunk.js.map
