@@ -29,13 +29,14 @@ function Tabel() {
             <tbody>
               {prov
                 .filter((d) => d.provinsi !== "Indonesia")
+                .filter((d) => d.provinsi !== null)
                 .map((d, i) => (
                   <tr key={d.kodeProvi}>
                     <td>{i + 1}</td>
                     <td>{d.provinsi}</td>
-                    <td>{d.kasusPosi.toLocaleString()}</td>
-                    <td>{d.kasusSemb.toLocaleString()}</td>
-                    <td>{d.kasusMeni.toLocaleString()}</td>
+                    <td>{Number(d.kasusPosi).toLocaleString()}</td>
+                    <td>{Number(d.kasusSemb).toLocaleString()}</td>
+                    <td>{Number(d.kasusMeni).toLocaleString()}</td>
                   </tr>
                 ))}
             </tbody>
