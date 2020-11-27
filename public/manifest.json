@@ -9,49 +9,49 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "/android-icon-36x36.png",
+      "src": "/assets/manifest/android-icon-36x36.png",
       "sizes": "42x42",
       "type": "image/png",
       "density": "0.75",
       "purpose": "maskable"
     },
     {
-      "src": "/android-icon-48x48.png",
+      "src": "/assets/manifest/android-icon-48x48.png",
       "sizes": "56x56",
       "type": "image/png",
       "density": "1.0",
       "purpose": "maskable"
     },
     {
-      "src": "/android-icon-72x72.png",
+      "src": "/assets/manifest/android-icon-72x72.png",
       "sizes": "84x84",
       "type": "image/png",
       "density": "1.5",
       "purpose": "maskable"
     },
     {
-      "src": "/android-icon-96x96.png",
+      "src": "/assets/manifest/android-icon-96x96.png",
       "sizes": "112x112",
       "type": "image/png",
       "density": "2.0",
       "purpose": "maskable"
     },
     {
-      "src": "/android-icon-144x144.png",
+      "src": "/assets/manifest/android-icon-144x144.png",
       "sizes": "169x169",
       "type": "image/png",
       "density": "3.0",
       "purpose": "maskable"
     },
     {
-      "src": "/android-icon-192x192.png",
+      "src": "/assets/manifest/android-icon-192x192.png",
       "sizes": "225x225",
       "type": "image/png",
       "density": "4.0",
       "purpose": "maskable"
     },
     {
-      "src": "/android-icon-512x512.png",
+      "src": "/assets/manifest/android-icon-512x512.png",
       "sizes": "602x602",
       "type": "image/png",
       "density": "5.0",

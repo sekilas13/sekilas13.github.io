@@ -1,5 +1,4 @@
 import { useRef, useEffect } from "react";
-import LogoSakral from "../../assets/Img/normal/KIR.png";
 import { useSpring, animated } from "react-spring";
 import { Row, Jumbotron, Container } from "react-bootstrap";
 
@@ -29,7 +28,7 @@ function JumbotronTop() {
       <Container>
         <Row className="justify-content-center">
           <animated.img
-            src={LogoSakral}
+            src={process.env.PUBLIC_URL + "/assets/real/KIR.png"}
             className="img-fluid text-center rounded"
             alt="Logo KIR"
             style={{
