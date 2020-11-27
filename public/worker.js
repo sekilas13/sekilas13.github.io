@@ -1,7 +1,8 @@
-const CACHE_NAME = "verr-1";
+const CACHE_NAME = "verr-2";
 const urlToCache = [
   "index.html",
   "offline.html",
+  "assets/real/KIR.png",
   "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css",
 ];
 
