@@ -10,9 +10,11 @@ function JumbotronTop() {
   const calc3 = (o) => `translateY(${o * 0.08}px)`;
 
   const handleScroll = () => {
-    const posY = ref.current.getBoundingClientRect().top;
-    const offset = window.pageYOffset - posY;
-    setOffset({ offset });
+    if (ref.current) {
+      const posY = ref.current.getBoundingClientRect().top;
+      const offset = window.pageYOffset - posY;
+      setOffset({ offset });
+    }
   };
 
   useEffect(() => {
