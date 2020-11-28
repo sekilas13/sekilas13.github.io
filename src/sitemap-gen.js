@@ -1,13 +1,19 @@
-require("@babel/register");
-require.extensions[".css"] = () => {};
+const Route = [":hash/", ":hash/covid"];
 
-const router = require("./App/Routing").default;
-const Sitemap = require("react-router-sitemap").default;
+const config = {
+  ":hash/": [{ hash: "#" }],
+  ":hash/covid": [{ hash: "#" }],
+};
 
-function generateSitemap() {
-  return new Sitemap(router())
-    .build("https://sekilas13.github.io")
-    .save("../public/sitemap.xml");
-}
+const fs = require("fs");
+const path = require("path");
 
-generateSitemap();
+const applyParams = require("react-router-sitemap").paramsApplier;
+const buildSitemap = require("react-router-sitemap").sitemapBuilder;
+
+const Jalur = applyParams(Route, config);
+
+const sitemap = buildSitemap("https://sekilas13.github.io/", Jalur);
+
+const dest = path.resolve("../public", "sitemap.xml");
+fs.writeFileSync(dest, sitemap.toString());
