@@ -1,3 +1,6 @@
+require("@babel/register");
+require.extensions[".css"] = () => {};
+
 const router = require("./App/Routing").default;
 const Sitemap = require("react-router-sitemap").default;
 
