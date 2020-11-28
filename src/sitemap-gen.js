@@ -15,5 +15,5 @@ const Jalur = applyParams(Route, config);
 
 const sitemap = buildSitemap("https://sekilas13.github.io/", Jalur);
 
-const dest = path.resolve("../public", "sitemap.xml");
+const dest = path.join(__dirname, "../public", "sitemap.xml");
 fs.writeFileSync(dest, sitemap.toString());
