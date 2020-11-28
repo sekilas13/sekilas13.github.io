@@ -1,16 +1,12 @@
-import { Fragment, useContext, useEffect, Suspense, lazy } from "react";
+import { Fragment, useContext, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./assets/Theme";
 import { GlobalStyles } from "./assets/GlobalStyles";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import Main from "./Components/main";
-import Covid from "./Components/covid";
-import NotFound from "./Components/NotFound";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { Context } from "./utils/stateProvider";
 import { observer } from "mobx-react";
+import Routing from "./Routing";
 import "./index.css";
-const Navigasi = lazy(() => import("./Components/Navigasi"));
 
 function App() {
   const store = useContext(Context);
@@ -31,23 +27,7 @@ function App() {
       <Fragment>
         <GlobalStyles />
         <SimpleReactLightbox>
-          <Router basename={process.env.PUBLIC_URL}>
-            <Suspense
-              fallback={
-                <nav
-                  className="navbar navbar-expand-lg navbar-light bg-light sticky-top"
-                  style={{ height: "56px" }}
-                />
-              }
-            >
-              <Navigasi />
-            </Suspense>
-            <Switch>
-              <Route exact path="/" component={Main} />
-              <Route path="/covid" component={Covid} />
-              <Route component={NotFound} />
-            </Switch>
-          </Router>
+          <Routing />
         </SimpleReactLightbox>
       </Fragment>
     </ThemeProvider>
