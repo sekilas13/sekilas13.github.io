@@ -1,6 +1,11 @@
-import { useRef, useEffect } from "react";
-import { useSpring, animated } from "react-spring";
+import { useSpring } from "react-spring";
+import Holder from "../../assets/Img/placeholder.svg";
+import { useRef, useEffect, Suspense, lazy } from "react";
 import { Row, Jumbotron, Container } from "react-bootstrap";
+
+const Gambar = lazy(() => import("./lazy/JumbonImg"));
+const H2 = lazy(() => import("./lazy/JumbonH2"));
+const P = lazy(() => import("./lazy/JumbonP"));
 
 function JumbotronTop() {
   const ref = useRef();
@@ -29,36 +34,27 @@ function JumbotronTop() {
     <Jumbotron fluid ref={ref}>
       <Container>
         <Row className="justify-content-center">
-          <animated.img
-            src={process.env.PUBLIC_URL + "/assets/real/KIR.png"}
-            className="img-fluid text-center rounded"
-            alt="Logo KIR"
-            style={{
-              transform: offset.interpolate(calc),
-              overflow: "hidden",
-            }}
-          />
+          <Suspense
+            fallback={
+              <img
+                src={Holder}
+                className="img-fluid text-center rounded"
+                alt="Logo KIR"
+              />
+            }
+          >
+            <Gambar offset={offset} calc={calc} />
+          </Suspense>
         </Row>
         <Row className="justify-content-center">
-          <animated.h2
-            style={{
-              transform: offset.interpolate(calc2),
-              overflow: "hidden",
-            }}
-            id="tsukilas"
-          >
-            Sekilas !
-          </animated.h2>
+          <Suspense fallback={<h2 id="tsukilas">Sekilas !</h2>}>
+            <H2 offset={offset} calc2={calc2} />
+          </Suspense>
         </Row>
         <Row className="justify-content-center">
-          <animated.p
-            style={{
-              transform: offset.interpolate(calc3),
-              overflow: "hidden",
-            }}
-          >
-            Semangat KIR Tiga Belas !
-          </animated.p>
+          <Suspense fallback={<p>Semangat KIR Tiga Belas !</p>}>
+            <P offset={offset} calc3={calc3} />
+          </Suspense>
         </Row>
       </Container>
     </Jumbotron>
