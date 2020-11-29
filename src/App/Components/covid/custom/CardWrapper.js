@@ -11,7 +11,7 @@ function CardWrapper({ label, data, icon }) {
           </Col>
           <Col md={8} className="text-center align-self-center">
             <h4>{label}</h4>
-            <h3>{data.toLocaleString()} Orang</h3>
+            <h3>{data} Orang</h3>
           </Col>
         </Row>
       </Card.Body>
