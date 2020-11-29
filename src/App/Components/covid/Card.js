@@ -14,16 +14,16 @@ const Lazy = lazy(() => import("./lazy/LazyCard"));
 const Fallback = () => (
   <Row className="mt-4 justify-content-center">
     <Col lg={3} sm={5}>
-      <CardWrapper label="Positif" data="====" icon={faVirus} />
+      <CardWrapper label="Positif" data="===,===" icon={faVirus} />
     </Col>
     <Col lg={3} sm={5}>
-      <CardWrapper label="Dirawat" data="====" icon={faHospital} />
+      <CardWrapper label="Dirawat" data="==,===" icon={faHospital} />
     </Col>
     <Col lg={3} sm={5}>
-      <CardWrapper label="Sembuh" data="====" icon={faHandHoldingMedical} />
+      <CardWrapper label="Sembuh" data="===,===" icon={faHandHoldingMedical} />
     </Col>
     <Col lg={3} sm={5}>
-      <CardWrapper label="Meninggal" data="====" icon={faSkullCrossbones} />
+      <CardWrapper label="Meninggal" data="==,===" icon={faSkullCrossbones} />
     </Col>
   </Row>
 );

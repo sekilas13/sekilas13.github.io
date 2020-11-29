@@ -36,28 +36,28 @@ function LazyCard() {
         <Col lg={3} sm={5}>
           <CardWrapper
             label="Positif"
-            data={main ? main.jumlahKasus.toLocaleString() : "===="}
+            data={main ? main.jumlahKasus.toLocaleString() : "===,==="}
             icon={faVirus}
           />
         </Col>
         <Col lg={3} sm={5}>
           <CardWrapper
             label="Dirawat"
-            data={main ? main.perawatan.toLocaleString() : "===="}
+            data={main ? main.perawatan.toLocaleString() : "==,==="}
             icon={faHospital}
           />
         </Col>
         <Col lg={3} sm={5}>
           <CardWrapper
             label="Sembuh"
-            data={main ? main.sembuh.toLocaleString() : "===="}
+            data={main ? main.sembuh.toLocaleString() : "===,==="}
             icon={faHandHoldingMedical}
           />
         </Col>
         <Col lg={3} sm={5}>
           <CardWrapper
             label="Meninggal"
-            data={main ? main.meninggal.toLocaleString() : "===="}
+            data={main ? main.meninggal.toLocaleString() : "==,==="}
             icon={faSkullCrossbones}
           />
         </Col>
