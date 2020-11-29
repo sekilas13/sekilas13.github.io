@@ -1,12 +1,27 @@
 import { Row, Col, Image } from "react-bootstrap";
 import gambar from "../../../assets/data/Gambar";
+import { Spring } from "react-spring/renderprops";
+import VisibilitySensor from "react-visibility-sensor";
 
 const GambarMap = () => (
   <Row>
     {gambar.map((g, i) => (
-      <Col md={4} key={i}>
-        <Image src={g.src} alt={g.alt} className="img-thumbnail mt-3" />
-      </Col>
+      <VisibilitySensor once>
+        {({ isVisible }) => (
+          <Col md={4} key={i}>
+            <Spring delay={100} to={{ opacity: isVisible ? 1 : 0 }}>
+              {({ opacity }) => (
+                <Image
+                  src={g.src}
+                  alt={g.alt}
+                  style={{ opacity }}
+                  className="img-thumbnail mt-3"
+                />
+              )}
+            </Spring>
+          </Col>
+        )}
+      </VisibilitySensor>
     ))}
   </Row>
 );
