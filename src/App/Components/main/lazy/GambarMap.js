@@ -6,9 +6,9 @@ import VisibilitySensor from "react-visibility-sensor";
 const GambarMap = () => (
   <Row>
     {gambar.map((g, i) => (
-      <VisibilitySensor once>
+      <VisibilitySensor once key={i}>
         {({ isVisible }) => (
-          <Col md={4} key={i}>
+          <Col md={4}>
             <Spring delay={100} to={{ opacity: isVisible ? 1 : 0 }}>
               {({ opacity }) => (
                 <Image
