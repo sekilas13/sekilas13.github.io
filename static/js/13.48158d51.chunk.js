@@ -1,0 +1,2 @@
+(this["webpackJsonpkir-13"]=this["webpackJsonpkir-13"]||[]).push([[13],{265:function(e,t,n){"use strict";n.r(t);var r=n(2),s=n(0),a=Object(s.lazy)((function(){return Promise.resolve().then(n.bind(null,59)).then((function(e){return{default:e.animated.img}}))}));t.default=function(e){var t=e.offset,n=e.calc;return Object(r.jsx)(a,{src:"/assets/real/KIR.png",className:"img-fluid text-center rounded",alt:"Logo KIR",style:{transform:t.interpolate(n),overflow:"hidden"}})}}}]);
+//# sourceMappingURL=13.48158d51.chunk.js.map
