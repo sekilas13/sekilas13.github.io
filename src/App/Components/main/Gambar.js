@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, memo } from "react";
 import { Container } from "react-bootstrap";
 import { SRLWrapper } from "simple-react-lightbox";
 import Loading from "../../Custom/Loading";
@@ -19,4 +19,4 @@ function Gambar() {
   );
 }
 
-export default Gambar;
+export default memo(Gambar);
