@@ -1,7 +1,8 @@
 import { useState, useEffect, useContext, useMemo, memo } from "react";
-import { Carousel } from "react-bootstrap";
 import { Context } from "../../utils/stateProvider";
 import data from "../../assets/data/Pandangan";
+import { Carousel } from "react-bootstrap";
+import { observer } from "mobx-react";
 
 function KataOrang() {
   const store = useContext(Context);
@@ -61,4 +62,4 @@ function KataOrang() {
   );
 }
 
-export default memo(KataOrang);
+export default memo(observer(KataOrang));
