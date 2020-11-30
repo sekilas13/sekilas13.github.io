@@ -1,5 +1,4 @@
 import { useSpring } from "react-spring";
-import Holder from "../../assets/Img/placeholder.svg";
 import { useRef, useEffect, Suspense, lazy } from "react";
 import { Row, Jumbotron, Container } from "react-bootstrap";
 
@@ -37,7 +36,9 @@ function JumbotronTop() {
           <Suspense
             fallback={
               <img
-                src={Holder}
+                src={
+                  process.env.PUBLIC_URL + "/assets/real/KIR.placeholder.png"
+                }
                 className="img-fluid text-center rounded"
                 alt="Logo KIR"
               />
