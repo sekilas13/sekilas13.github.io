@@ -35,11 +35,14 @@ function JumbotronTop() {
         <Row className="justify-content-center">
           <Suspense
             fallback={
-              <img
-                src={process.env.PUBLIC_URL + "/assets/real/KIR.png"}
-                className="img-fluid text-center rounded"
-                alt="Logo KIR"
-              />
+              // <img
+              //   src={
+              //     process.env.PUBLIC_URL + "/assets/real/KIR.placeholder.png"
+              //   }
+              //   className="img-fluid text-center rounded"
+              //   alt="Logo KIR"
+              // />
+              <></>
             }
           >
             <Gambar offset={offset} calc={calc} />
