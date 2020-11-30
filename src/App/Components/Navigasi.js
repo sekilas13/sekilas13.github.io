@@ -1,4 +1,4 @@
-import { useRef, useState, useContext, Fragment } from "react";
+import { useRef, useState, useContext, Fragment, useMemo, memo } from "react";
 import { Container, Navbar, Nav, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDarkMode } from "../hooks/useDarkMode";
@@ -24,6 +24,16 @@ function Navigasi() {
 
   const location = useLocation();
   const history = useHistory();
+
+  const [iconMoon, setMoona] = useState(MoonRegular);
+  const [iconSun, setMrSun] = useState(SunSolid);
+
+  useMemo(() => setMrSun(store.theme === "dark" ? SunRegular : SunSolid), [
+    store.theme,
+  ]);
+  useMemo(() => setMoona(store.theme === "dark" ? MoonSolid : MoonRegular), [
+    store.theme,
+  ]);
 
   const theme = store.theme;
 
@@ -151,21 +161,17 @@ function Navigasi() {
           <Form>
             <Form.Row className="justify-content-center">
               <small className="sun">
-                <FontAwesomeIcon
-                  icon={theme !== "dark" ? SunSolid : SunRegular}
-                />
+                <FontAwesomeIcon icon={iconSun} />
               </small>
               <Form.Check
                 type="switch"
                 id="custom-switch"
                 checked={theme === "light" ? false : true}
                 onChange={themeToggler}
-                label=""
+                label="&zwnj;"
               />
               <small className="moon">
-                <FontAwesomeIcon
-                  icon={theme !== "dark" ? MoonRegular : MoonSolid}
-                />
+                <FontAwesomeIcon icon={iconMoon} />
               </small>
             </Form.Row>
           </Form>
@@ -175,4 +181,4 @@ function Navigasi() {
   );
 }
 
-export default observer(Navigasi);
+export default memo(observer(Navigasi));
