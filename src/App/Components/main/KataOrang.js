@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useMemo, memo } from "react";
 import { Carousel } from "react-bootstrap";
 import { Context } from "../../utils/stateProvider";
 import data from "../../assets/data/Pandangan";
@@ -12,9 +12,10 @@ function KataOrang() {
     height: window.innerHeight,
   });
 
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
+  const handleSelect = useMemo(
+    (selectedIndex) => void setIndex(selectedIndex),
+    []
+  );
 
   useEffect(() => {
     const curr = document.querySelector("#KataOrang");
@@ -40,9 +41,9 @@ function KataOrang() {
           <Carousel.Item key={i}>
             <img
               className="d-block w-100"
-              src={`https://via.placeholder.com/${ukuran.width}x${ukuran.height}/${
-                store.theme === "light" ? "f1faee" : "373940"
-              }/fff&text=+`}
+              src={`https://via.placeholder.com/${ukuran.width}x${
+                ukuran.height
+              }/${store.theme === "light" ? "f1faee" : "373940"}/fff&text=+`}
               alt={key.alt}
             />
             <Carousel.Caption>
@@ -60,4 +61,4 @@ function KataOrang() {
   );
 }
 
-export default KataOrang;
+export default memo(KataOrang);
