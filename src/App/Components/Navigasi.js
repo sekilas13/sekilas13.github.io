@@ -1,18 +1,11 @@
-import { useRef, useState, useContext, Fragment, useMemo, memo } from "react";
-import { Container, Navbar, Nav, Form } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useDarkMode } from "../hooks/useDarkMode";
-import {
-  faSun as SunSolid,
-  faMoon as MoonSolid,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faSun as SunRegular,
-  faMoon as MoonRegular,
-} from "@fortawesome/free-regular-svg-icons";
 import { useLocation, useHistory, Link as SPALink } from "react-router-dom";
+import { useRef, useState, useContext, Fragment, memo } from "react";
+import { Container, Navbar, Nav, Form } from "react-bootstrap";
+import { useDarkMode } from "../hooks/useDarkMode";
 import { Context } from "../utils/stateProvider";
 import { observer } from "mobx-react";
+import Moon from "./Memoized/Moon";
+import Sun from "./Memoized/Sun";
 
 function Navigasi() {
   const store = useContext(Context);
@@ -24,16 +17,6 @@ function Navigasi() {
 
   const location = useLocation();
   const history = useHistory();
-
-  const [iconMoon, setMoona] = useState(MoonRegular);
-  const [iconSun, setMrSun] = useState(SunSolid);
-
-  useMemo(() => setMrSun(store.theme === "dark" ? SunRegular : SunSolid), [
-    store.theme,
-  ]);
-  useMemo(() => setMoona(store.theme === "dark" ? MoonSolid : MoonRegular), [
-    store.theme,
-  ]);
 
   const theme = store.theme;
 
@@ -161,7 +144,7 @@ function Navigasi() {
           <Form>
             <Form.Row className="justify-content-center">
               <small className="sun">
-                <FontAwesomeIcon icon={iconSun} />
+                <Sun theme={theme} />
               </small>
               <Form.Check
                 type="switch"
@@ -171,7 +154,7 @@ function Navigasi() {
                 label="&zwnj;"
               />
               <small className="moon">
-                <FontAwesomeIcon icon={iconMoon} />
+                <Moon theme={theme} />
               </small>
             </Form.Row>
           </Form>
