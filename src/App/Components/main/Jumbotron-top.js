@@ -36,9 +36,7 @@ function JumbotronTop() {
           <Suspense
             fallback={
               <img
-                src={
-                  process.env.PUBLIC_URL + "/assets/real/KIR.placeholder.png"
-                }
+                src={process.env.PUBLIC_URL + "/assets/real/KIR.png"}
                 className="img-fluid text-center rounded"
                 alt="Logo KIR"
               />
