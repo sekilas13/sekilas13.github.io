@@ -1,8 +1,8 @@
 import { InView } from "react-intersection-observer";
 import { Transition } from "react-spring/renderprops";
 
-const From = { transform: "translate3d(0,10px,0)", opacity: 0 };
-const Enter = { transform: "translate3d(0,0px,0)", opacity: 1 };
+const From = { transform: "translate3d(20px,0,0)", opacity: 0 };
+const Enter = { transform: "translate3d(0px,0,0)", opacity: 1 };
 const Leave = { opacity: 0 };
 
 function FooterInfo() {
@@ -16,7 +16,7 @@ function FooterInfo() {
             enter={Enter}
             leave={Leave}
             config={{
-              duration: 1500,
+              duration: 750,
             }}
           >
             {(show) =>
