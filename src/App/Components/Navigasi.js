@@ -1,8 +1,9 @@
-import { useLocation, useHistory, Link as SPALink } from "react-router-dom";
-import { useRef, useState, useContext, Fragment, memo } from "react";
+import { useRef, useState, useContext, useCallback, memo } from "react";
 import { Container, Navbar, Nav, Form } from "react-bootstrap";
+import { useLocation, useHistory } from "react-router-dom";
 import { useDarkMode } from "../hooks/useDarkMode";
 import { Context } from "../utils/stateProvider";
+import NavLink from "./Memoized/NavLink";
 import { observer } from "mobx-react";
 import Moon from "./Memoized/Moon";
 import Sun from "./Memoized/Sun";
@@ -20,7 +21,13 @@ function Navigasi() {
 
   const theme = store.theme;
 
-  const setState = (data) => UNSAFE_setState({ ...state, ...data });
+  const setState = useCallback(
+    (data) => UNSAFE_setState({ ...state, ...data }),
+    [state]
+  );
+  const expandClose = useCallback(() => setState({ expanded: false }), [
+    setState,
+  ]);
 
   const handleBrand = (e) => {
     e.preventDefault();
@@ -45,35 +52,6 @@ function Navigasi() {
     }
   };
 
-  const handleLink = (e) => {
-    e.preventDefault();
-
-    setState({ expanded: false });
-    const el = document.querySelector(e.target.id);
-    if (state.expanded) {
-      setTimeout(() => {
-        const tujuan =
-          el.offsetTop - ref.current.getBoundingClientRect().height;
-        window.scrollTo(0, tujuan);
-      }, 150);
-    } else {
-      const tujuan = el.offsetTop - ref.current.getBoundingClientRect().height;
-      window.scrollTo(0, tujuan);
-    }
-  };
-
-  const Link = {
-    main: [
-      { nama: "Deskripsi", to: "#deskripsi" },
-      { nama: "Pandangan Orang", to: "#KataOrang" },
-      { nama: "Gambar", to: "#gambar" },
-    ],
-    covid: [
-      { nama: "Kondisi Terkini", to: "#all" },
-      { nama: "Data Provinsi", to: "#provinsi" },
-    ],
-  };
-
   return (
     <Navbar
       bg={theme === "light" && theme}
@@ -92,54 +70,12 @@ function Navigasi() {
         <Navbar.Toggle aria-controls="navigasi-nav" />
         <Navbar.Collapse id="navigasi-nav">
           <Nav className="ml-auto text-center">
-            {location.pathname === "/" && (
-              <Fragment>
-                <Nav.Link
-                  as={SPALink}
-                  to="/covid"
-                  onClick={() =>
-                    state.expanded && setState({ expanded: false })
-                  }
-                >
-                  Informasi Covid 19
-                </Nav.Link>
-
-                {Link.main.map((link, i) => (
-                  <Nav.Link
-                    key={i}
-                    href={link.to}
-                    id={link.to}
-                    onClick={handleLink}
-                  >
-                    {link.nama}
-                  </Nav.Link>
-                ))}
-              </Fragment>
-            )}
-            {location.pathname === "/covid" && (
-              <Fragment>
-                <Nav.Link
-                  as={SPALink}
-                  to="/"
-                  onClick={() =>
-                    state.expanded && setState({ expanded: false })
-                  }
-                >
-                  Halaman Utama
-                </Nav.Link>
-
-                {Link.covid.map((link, i) => (
-                  <Nav.Link
-                    key={i}
-                    href={link.to}
-                    id={link.to}
-                    onClick={handleLink}
-                  >
-                    {link.nama}
-                  </Nav.Link>
-                ))}
-              </Fragment>
-            )}
+            <NavLink
+              path={location.pathname}
+              navbarRef={ref.current}
+              expanded={state.expanded}
+              setExpandClose={expandClose}
+            />
           </Nav>
           <Form>
             <Form.Row className="justify-content-center">
