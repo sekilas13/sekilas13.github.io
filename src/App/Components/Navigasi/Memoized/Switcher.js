@@ -13,8 +13,4 @@ function Switcher({ theme, tToggler }) {
   );
 }
 
-const compare = function (prevProps, nextProps) {
-  return prevProps.theme === nextProps.theme;
-};
-
-export default memo(Switcher, compare);
+export default memo(Switcher);
