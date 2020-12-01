@@ -1,8 +1,8 @@
 import { useRef, useState, useContext, useCallback, memo } from "react";
 import { Container, Navbar, Nav, Form } from "react-bootstrap";
 import { useLocation, useHistory } from "react-router-dom";
-import { useDarkMode } from "../hooks/useDarkMode";
-import { Context } from "../utils/stateProvider";
+import { useDarkMode } from "../../hooks/useDarkMode";
+import { Context } from "../../utils/stateProvider";
 import Switcher from "./Memoized/Switcher";
 import NavLink from "./Memoized/NavLink";
 import { observer } from "mobx-react";
