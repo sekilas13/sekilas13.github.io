@@ -19,15 +19,17 @@ function NavLink({ path, navbarRef: ref, expanded, setExpandClose }) {
     e.preventDefault();
 
     setExpandClose();
-    const el = document.querySelector(e.target.id);
-    if (expanded) {
-      setTimeout(() => {
+    if (ref) {
+      const el = document.querySelector(e.target.id);
+      if (expanded) {
+        setTimeout(() => {
+          const tujuan = el.offsetTop - ref.getBoundingClientRect().height;
+          window.scrollTo(0, tujuan);
+        }, 150);
+      } else {
         const tujuan = el.offsetTop - ref.getBoundingClientRect().height;
         window.scrollTo(0, tujuan);
-      }, 150);
-    } else {
-      const tujuan = el.offsetTop - ref.getBoundingClientRect().height;
-      window.scrollTo(0, tujuan);
+      }
     }
   };
 
