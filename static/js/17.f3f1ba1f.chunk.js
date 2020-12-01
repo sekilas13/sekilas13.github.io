@@ -1,2 +1,0 @@
-(this["webpackJsonpkir-13"]=this["webpackJsonpkir-13"]||[]).push([[17],{273:function(e,t,n){"use strict";n.r(t);var r=n(2),i=n(0),s=Object(i.lazy)((function(){return Promise.resolve().then(n.bind(null,57)).then((function(e){return{default:e.animated.h2}}))}));t.default=function(e){var t=e.offset,n=e.calc2;return Object(r.jsx)(s,{style:{transform:t.interpolate(n),overflow:"hidden"},id:"tsukilas",children:"Sekilas !"})}}}]);
-//# sourceMappingURL=17.f3f1ba1f.chunk.js.map
