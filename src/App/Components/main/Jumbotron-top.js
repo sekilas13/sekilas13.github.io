@@ -1,5 +1,6 @@
 import { useSpring } from "react-spring";
 import { useRef, useEffect, Suspense, lazy } from "react";
+import Placeholder from "../../assets/Img/placeholder.svg";
 import { Row, Jumbotron, Container } from "react-bootstrap";
 
 const Gambar = lazy(() => import("./lazy/JumbonImg"));
@@ -35,14 +36,11 @@ function JumbotronTop() {
         <Row className="justify-content-center">
           <Suspense
             fallback={
-              // <img
-              //   src={
-              //     process.env.PUBLIC_URL + "/assets/real/KIR.placeholder.png"
-              //   }
-              //   className="img-fluid text-center rounded"
-              //   alt="Logo KIR"
-              // />
-              <></>
+              <img
+                src={Placeholder}
+                className="img-fluid text-center rounded"
+                alt="Logo KIR"
+              />
             }
           >
             <Gambar offset={offset} calc={calc} />

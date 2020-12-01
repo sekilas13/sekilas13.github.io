@@ -2,6 +2,7 @@ import { lazy } from "react";
 const Animated = lazy(() =>
   import("react-spring").then((mod) => ({ default: mod.animated.img }))
 );
+// process.env.PUBLIC_URL + "/assets/real/KIR.placeholder.png"
 
 function JumboImg({ offset, calc }) {
   return (
