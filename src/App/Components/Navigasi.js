@@ -3,6 +3,7 @@ import { Container, Navbar, Nav, Form } from "react-bootstrap";
 import { useLocation, useHistory } from "react-router-dom";
 import { useDarkMode } from "../hooks/useDarkMode";
 import { Context } from "../utils/stateProvider";
+import Switcher from "./Memoized/Switcher";
 import NavLink from "./Memoized/NavLink";
 import { observer } from "mobx-react";
 import Moon from "./Memoized/Moon";
@@ -28,6 +29,7 @@ function Navigasi() {
   const expandClose = useCallback(() => setState({ expanded: false }), [
     setState,
   ]);
+  const tToggler = useCallback(() => void themeToggler(), [themeToggler]);
 
   const handleBrand = (e) => {
     e.preventDefault();
@@ -82,13 +84,7 @@ function Navigasi() {
               <small className="sun">
                 <Sun theme={theme} />
               </small>
-              <Form.Check
-                type="switch"
-                id="custom-switch"
-                checked={theme === "light" ? false : true}
-                onChange={themeToggler}
-                label="&zwnj;"
-              />
+              <Switcher theme={theme} tToggler={tToggler} />
               <small className="moon">
                 <Moon theme={theme} />
               </small>
