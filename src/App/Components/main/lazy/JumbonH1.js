@@ -1,6 +1,6 @@
 import { lazy } from "react";
 const Animated = lazy(() =>
-  import("react-spring").then((mod) => ({ default: mod.animated.h2 }))
+  import("react-spring").then((mod) => ({ default: mod.animated.h1 }))
 );
 
 function JumboH2({ offset, calc2 }) {

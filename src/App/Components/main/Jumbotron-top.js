@@ -4,7 +4,7 @@ import { Row, Jumbotron, Container } from "react-bootstrap";
 import "./SuspenseJumbotron.css";
 
 const Gambar = lazy(() => import("./lazy/JumbonImg"));
-const H2 = lazy(() => import("./lazy/JumbonH2"));
+const H1 = lazy(() => import("./lazy/JumbonH1"));
 const P = lazy(() => import("./lazy/JumbonP"));
 
 function JumbotronTop() {
@@ -50,8 +50,8 @@ function JumbotronTop() {
           </Suspense>
         </Row>
         <Row className="justify-content-center">
-          <Suspense fallback={<h2 id="tsukilas">Sekilas !</h2>}>
-            <H2 offset={offset} calc2={calc2} />
+          <Suspense fallback={<h1 id="tsukilas">Sekilas !</h1>}>
+            <H1 offset={offset} calc2={calc2} />
           </Suspense>
         </Row>
         <Row className="justify-content-center">
