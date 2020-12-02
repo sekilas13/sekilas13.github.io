@@ -1,6 +1,7 @@
 import { useSpring } from "react-spring";
 import { useRef, useEffect, Suspense, lazy } from "react";
 import { Row, Jumbotron, Container } from "react-bootstrap";
+import "./SuspenseJumbotron.css";
 
 const Gambar = lazy(() => import("./lazy/JumbonImg"));
 const H2 = lazy(() => import("./lazy/JumbonH2"));
@@ -39,10 +40,8 @@ function JumbotronTop() {
                 src={
                   process.env.PUBLIC_URL + "/assets/real/KIR.placeholder.png"
                 }
-                style={{
-                  filter: "blur(5px)",
-                }}
                 className="img-fluid text-center rounded"
+                id="suspense"
                 alt="Logo KIR"
               />
             }

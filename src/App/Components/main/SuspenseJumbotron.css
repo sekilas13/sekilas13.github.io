@@ -1,0 +1,32 @@
+.jumbotron #suspense {
+  filter: blur(5px);
+  width: 18%;
+}
+
+@media (max-width: 576px) {
+  .jumbotron #suspense {
+    width: 33%;
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .jumbotron img.suspense {
+    width: 27%;
+    transform: scale(1.4);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .jumbotron #suspense {
+    width: 26%;
+    transform: scale(1.6);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .jumbotron #suspense {
+    width: 20%;
+    transform: scale(1.8);
+  }
+}
