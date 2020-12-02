@@ -18,14 +18,7 @@ const src = {
 function JumboImg({ offset, calc }) {
   const [loading, setLoading] = useState(true);
 
-  useEffect(
-    () =>
-      setTimeout(
-        loadRealImage(src.real).then(() => setLoading(false)),
-        500
-      ),
-    []
-  );
+  useEffect(() => loadRealImage(src.real).then(() => setLoading(false)), []);
 
   return (
     <Animated
