@@ -14,20 +14,21 @@ const List = {
   ],
 };
 
-function NavLink({ path, navbarRef: ref, expanded, setExpandClose }) {
+function NavLink({ path, getHeight, expanded, setExpandClose }) {
   const handleLink = (e) => {
     e.preventDefault();
 
     setExpandClose();
-    if (ref) {
+    const height = getHeight();
+    if (height) {
       const el = document.querySelector(e.target.id);
       if (expanded) {
         setTimeout(() => {
-          const tujuan = el.offsetTop - ref.getBoundingClientRect().height;
+          const tujuan = el.offsetTop - height;
           window.scrollTo(0, tujuan);
         }, 150);
       } else {
-        const tujuan = el.offsetTop - ref.getBoundingClientRect().height;
+        const tujuan = el.offsetTop - height;
         window.scrollTo(0, tujuan);
       }
     }

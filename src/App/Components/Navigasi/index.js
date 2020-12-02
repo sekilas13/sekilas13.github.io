@@ -28,6 +28,11 @@ function Navigasi() {
     setState,
   ]);
   const tToggler = useCallback(() => void themeToggler(), [themeToggler]);
+  const getHeight = useCallback(
+    () =>
+      ref.current ? ref.current.getBoundingClientRect().height : ref.current,
+    [ref]
+  );
 
   const handleBrand = (e) => {
     e.preventDefault();
@@ -72,7 +77,7 @@ function Navigasi() {
           <Nav className="ml-auto text-center">
             <NavLink
               path={location.pathname}
-              navbarRef={ref.current}
+              getHeight={getHeight}
               expanded={state.expanded}
               setExpandClose={expandClose}
             />
