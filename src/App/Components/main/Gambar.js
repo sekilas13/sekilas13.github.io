@@ -1,7 +1,8 @@
-import { Suspense, lazy, memo } from "react";
+import { Suspense, memo } from "react";
+import loadable from "@loadable/component";
 import Loading from "../../Custom/Loading";
 
-const GambarContent = lazy(() => import("./lazy/GambarContent"));
+const GambarContent = loadable(() => import("./lazy/GambarContent"));
 
 function Gambar() {
   return (
