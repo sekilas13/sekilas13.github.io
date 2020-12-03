@@ -5,6 +5,13 @@ import img4 from "../Img/normal/4.jpg";
 import img5 from "../Img/normal/5.jpg";
 import img6 from "../Img/normal/6.jpg";
 
+import img1holder from "../Img/normal/blur/1.jpg";
+import img2holder from "../Img/normal/blur/2.jpg";
+import img3holder from "../Img/normal/blur/3.jpg";
+import img4holder from "../Img/normal/blur/4.jpg";
+import img5holder from "../Img/normal/blur/5.jpg";
+import img6holder from "../Img/normal/blur/6.jpg";
+
 import webp1 from "../Img/webp/1.webp";
 import webp2 from "../Img/webp/2.webp";
 import webp3 from "../Img/webp/3.webp";
@@ -16,28 +23,34 @@ import isSupport from "../../utils/isSupportWebp";
 
 const ListGambar = [
   {
+    placeholder: img1holder,
     src: isSupport ? webp1 : img1,
     alt: "Demonstrasi roket air pada saat pengenalan eskul",
   },
   {
+    placeholder: img2holder,
     src: isSupport ? webp2 : img2,
     alt:
       "Eksperimen odol gajah yang reaksinya mengeluarkan odol yang ada di botol",
   },
   {
+    placeholder: img3holder,
     src: isSupport ? webp3 : img3,
     alt: "Anak kelas 7 ikut serta mencoba eksperimen odol gajah",
   },
   {
+    placeholder: img4holder,
     src: isSupport ? webp4 : img4,
     alt: "Anggota KIR yang melakukan eksperimen 'Nafas api'",
   },
   {
+    placeholder: img5holder,
     src: isSupport ? webp5 : img5,
     alt:
       "Anggota eksperimen meniup selang yg berisi tepung maizena untuk menghasilkan nafas api",
   },
   {
+    placeholder: img6holder,
     src: isSupport ? webp6 : img6,
     alt: "Anggota eksperimen sedang menyiapkan bahan dan alat",
   },

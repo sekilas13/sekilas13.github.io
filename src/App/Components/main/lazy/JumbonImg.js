@@ -1,14 +1,8 @@
+import loadRealImage from "../../../utils/loadRealImage";
 import { lazy, useEffect, useState } from "react";
 const Animated = lazy(() =>
   import("react-spring").then((mod) => ({ default: mod.animated.img }))
 );
-
-const loadRealImage = (src) =>
-  new Promise((resolve) => {
-    const image = new Image();
-    image.onload = resolve;
-    image.src = src;
-  });
 
 const src = {
   real: process.env.PUBLIC_URL + "/assets/real/KIR.png",
