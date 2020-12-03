@@ -1,9 +1,12 @@
-import { Suspense, lazy } from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
-import Main from "./Components/main";
-import Covid from "./Components/covid";
-import NotFound from "./Components/NotFound";
-const Navigasi = lazy(() => import("./Components/Navigasi"));
+import loadable from "@loadable/component";
+import { Suspense } from "react";
+
+const NotFound = loadable(() => import("./Components/NotFound"));
+const Covid = loadable(() => import("./Components/covid"));
+const Main = loadable(() => import("./Components/main"));
+
+const Navigasi = loadable(() => import("./Components/Navigasi"));
 
 function Routing() {
   return (
