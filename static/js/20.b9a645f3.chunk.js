@@ -1,2 +1,0 @@
-(this["webpackJsonpkir-13"]=this["webpackJsonpkir-13"]||[]).push([[20],{277:function(e,t,n){"use strict";n.r(t);var r=n(2),a=n(0),i=Object(a.lazy)((function(){return Promise.resolve().then(n.bind(null,57)).then((function(e){return{default:e.animated.p}}))}));t.default=function(e){var t=e.offset,n=e.calc3;return Object(r.jsx)(i,{style:{transform:t.interpolate(n),overflow:"hidden"},children:"Semangat KIR Tiga Belas !"})}}}]);
-//# sourceMappingURL=20.b9a645f3.chunk.js.map
