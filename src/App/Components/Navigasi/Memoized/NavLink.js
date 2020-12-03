@@ -38,18 +38,22 @@ function NavLink({ path, getHeight, expanded, setExpandClose }) {
 
   return (
     <>
-      <Nav.Link
-        as={Link}
-        to={path === "/" ? "/covid" : "/"}
-        onClick={() => expanded && setExpandClose()}
-      >
-        {path === "/" ? "Informasi Covid 19" : "Halaman Utama"}
-      </Nav.Link>
-      {renderer.map((link, i) => (
-        <Nav.Link key={i} href={link.to} id={link.to} onClick={handleLink}>
-          {link.nama}
-        </Nav.Link>
-      ))}
+      {renderer && (
+        <>
+          <Nav.Link
+            as={Link}
+            to={path === "/" ? "/covid" : "/"}
+            onClick={() => expanded && setExpandClose()}
+          >
+            {path === "/" ? "Informasi Covid 19" : "Halaman Utama"}
+          </Nav.Link>
+          {renderer.map((link, i) => (
+            <Nav.Link key={i} href={link.to} id={link.to} onClick={handleLink}>
+              {link.nama}
+            </Nav.Link>
+          ))}
+        </>
+      )}
     </>
   );
 }
