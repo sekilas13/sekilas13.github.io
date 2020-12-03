@@ -3,7 +3,7 @@ const Animated = lazy(() =>
   import("react-spring").then((mod) => ({ default: mod.animated.h1 }))
 );
 
-function JumboH2({ offset, calc2 }) {
+function JumboH1({ offset, calc2 }) {
   return (
     <Animated
       style={{
@@ -17,4 +17,4 @@ function JumboH2({ offset, calc2 }) {
   );
 }
 
-export default JumboH2;
+export default JumboH1;
