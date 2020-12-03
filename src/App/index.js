@@ -2,7 +2,6 @@ import { Fragment, useContext, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./assets/Theme";
 import { GlobalStyles } from "./assets/GlobalStyles";
-import SimpleReactLightbox from "simple-react-lightbox";
 import { Context } from "./utils/stateProvider";
 import { observer } from "mobx-react";
 import Routing from "./Routing";
@@ -26,9 +25,7 @@ function App() {
     <ThemeProvider theme={themeMode}>
       <Fragment>
         <GlobalStyles />
-        <SimpleReactLightbox>
-          <Routing />
-        </SimpleReactLightbox>
+        <Routing />
       </Fragment>
     </ThemeProvider>
   );
