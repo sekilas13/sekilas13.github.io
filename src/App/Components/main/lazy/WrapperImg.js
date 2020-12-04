@@ -5,12 +5,15 @@ import { Col, Image } from "react-bootstrap";
 import { useState, useEffect } from "react";
 
 function WrapperImg({ image }) {
+  const [loading, setLoading] = useState(true);
   const [src, setSrc] = useState(image.placeholder);
   const [firstTimeVisible, setFTV] = useState(false);
 
   useEffect(() => {
     if (firstTimeVisible) {
-      loadRealImage(image.src).then(() => setSrc(image.src));
+      loadRealImage(image.src)
+        .then(() => void setSrc(image.src))
+        .then(() => void setLoading(false));
     }
   }, [firstTimeVisible]);
 
@@ -29,7 +32,11 @@ function WrapperImg({ image }) {
               <Image
                 src={src}
                 alt={image.alt}
-                style={{ opacity, width: "100%" }}
+                style={{
+                  opacity,
+                  width: "100%",
+                  filter: loading ? "blur(5px)" : "none",
+                }}
                 className="img-fluid img-thumbnail mt-3"
               />
             )}
