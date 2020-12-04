@@ -1,0 +1,2 @@
+(this["webpackJsonpkir-13"]=this["webpackJsonpkir-13"]||[]).push([[25],{277:function(e,t,n){"use strict";n.r(t);var c=n(3),i=n(0),s=n(12),r=n(94),a=Object(s.a)((function(){return Promise.all([n.e(6),n.e(26)]).then(n.bind(null,268))}));function b(){return Object(c.jsx)("section",{id:"gambar",children:Object(c.jsx)(i.Suspense,{fallback:Object(r.a)(),children:Object(c.jsx)(a,{})})})}t.default=Object(i.memo)(b)}}]);
+//# sourceMappingURL=25.b685dc5d.chunk.js.map
