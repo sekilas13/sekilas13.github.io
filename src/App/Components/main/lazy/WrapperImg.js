@@ -15,7 +15,7 @@ function WrapperImg({ image }) {
         .then(() => void setSrc(image.src))
         .then(() => void setLoading(false));
     }
-  }, [firstTimeVisible]);
+  }, [firstTimeVisible, image.src]);
 
   const onChangeVisible = (isVisible) => {
     if (!firstTimeVisible) {
