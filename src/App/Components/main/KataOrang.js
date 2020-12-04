@@ -46,6 +46,8 @@ function KataOrang() {
                 ukuran.height
               }/${store.theme === "light" ? "f1faee" : "373940"}/fff&text=+`}
               alt={key.alt}
+              width={ukuran.width}
+              height={ukuran.height}
             />
             <Carousel.Caption>
               <h3 style={{ color: store.theme === "light" ? "000" : "fff" }}>
