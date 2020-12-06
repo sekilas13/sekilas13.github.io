@@ -6,13 +6,15 @@ import Sun from "./Sun";
 
 function FormSwitcher({ theme, tToggler }) {
   return (
-    <Form>
+    <Form style={{ paddingLeft: "10px", paddingRight: "10px" }}>
       <Form.Row className="justify-content-center">
-        <small className="sun">
+        <small
+          style={{ paddingTop: "3px", paddingRight: "7px", color: "yellow" }}
+        >
           <Sun theme={theme} />
         </small>
         <Switcher theme={theme} tToggler={tToggler} />
-        <small className="moon">
+        <small style={{ paddingTop: "2.4px", color: "blue" }}>
           <Moon theme={theme} />
         </small>
       </Form.Row>

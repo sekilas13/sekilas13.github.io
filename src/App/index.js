@@ -5,7 +5,6 @@ import { GlobalStyles } from "./assets/GlobalStyles";
 import { Context } from "./utils/stateProvider";
 import { observer } from "mobx-react";
 import Routing from "./Routing";
-import "./index.css";
 
 function App() {
   const store = useContext(Context);
