@@ -7,6 +7,7 @@ export const lightTheme = {
     h2: "#353535",
     p: "#011627",
   },
+  kataOrang: "#f1faee",
   carousel: {
     color: "#000",
     indicator: "#242423",
@@ -31,6 +32,7 @@ export const darkTheme = {
     h2: "#f8f9fa",
     p: "#eaeaea",
   },
+  kataOrang: "#373940",
   carousel: {
     color: "#fff",
     indicator: "#fff",

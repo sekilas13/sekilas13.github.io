@@ -27,6 +27,10 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.50s linear;
   }
 
+  #kataOrang {
+    background-color: ${({ theme }) => theme.kataOrang};
+  }
+
   .carousel-caption {
     color: ${({ theme }) => theme.carousel.color};
     transition: all 0.50s linear;

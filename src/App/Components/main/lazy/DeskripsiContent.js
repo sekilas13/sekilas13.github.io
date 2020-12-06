@@ -24,7 +24,7 @@ function DeskripsiContent() {
         <Col sm={5}>
           <p>
             Tidak ada senioritas di eksul kir ini, semua bebas berekspresi dan
-            berpendapat . Kalian bisa belajar dan bertanya-tanya ke kakak kelas
+            berpendapat. Kalian bisa belajar dan bertanya-tanya ke kakak kelas
             seputar hal sekolah ataupun luar sekolah. Selain itu jam
             ekstrakurikuler kir fleksibel, kalian bisa pulang ke rumah untuk
             berganti pakaian, jajan, makan, ataupun bermain game bersama. Ekskul
