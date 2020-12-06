@@ -44,14 +44,14 @@ function Navigasi() {
         el.classList.remove("active");
       });
       if (state.expanded) {
-        setState({ expanded: false });
+        expandClose();
         setTimeout(() => window.scrollTo(0, 0), 150);
       } else {
         window.scrollTo(0, 0);
       }
     } else {
       if (state.expanded) {
-        setState({ expanded: false });
+        expandClose();
         setTimeout(() => history.push("/"), 300);
       } else {
         history.push("/");

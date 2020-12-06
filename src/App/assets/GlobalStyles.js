@@ -27,7 +27,7 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.50s linear;
   }
 
-  #kataOrang {
+  #KataOrang {
     background-color: ${({ theme }) => theme.kataOrang};
   }
 
