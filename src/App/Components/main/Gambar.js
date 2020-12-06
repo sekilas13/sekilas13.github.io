@@ -1,15 +1,15 @@
-import { Suspense, memo } from "react";
+import { memo } from "react";
+import LazyLoad from "react-lazyload";
 import loadable from "@loadable/component";
-import Loading from "../../Custom/Loading";
 
 const GambarContent = loadable(() => import("./lazy/GambarContent"));
 
 function Gambar() {
   return (
     <section id="gambar">
-      <Suspense fallback={Loading()}>
+      <LazyLoad once>
         <GambarContent />
-      </Suspense>
+      </LazyLoad>
     </section>
   );
 }
