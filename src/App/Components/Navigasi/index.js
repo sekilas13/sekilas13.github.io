@@ -3,9 +3,11 @@ import { Container, Navbar, Nav } from "react-bootstrap";
 import { useLocation, useHistory } from "react-router-dom";
 import { useDarkMode } from "../../hooks/useDarkMode";
 import { Context } from "../../utils/stateProvider";
-import FormSwitcher from "./Memoized/FormSwitcher";
-import NavLink from "./Memoized/NavLink";
+import loadable from "@loadable/component";
 import { observer } from "mobx-react";
+
+const FormSwitcher = loadable(() => import("./Memoized/FormSwitcher"));
+const NavLink = loadable(() => import("./Memoized/NavLink"));
 
 function Navigasi() {
   const store = useContext(Context);
