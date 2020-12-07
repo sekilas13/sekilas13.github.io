@@ -1,10 +1,12 @@
-import { Fragment, useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./assets/Theme";
 import { GlobalStyles } from "./assets/GlobalStyles";
 import { Context } from "./utils/stateProvider";
+import loadable from "@loadable/component";
 import { observer } from "mobx-react";
-import Routing from "./Routing";
+
+const Routing = loadable(() => import("./Routing"));
 
 function App() {
   const store = useContext(Context);
@@ -22,10 +24,8 @@ function App() {
 
   return (
     <ThemeProvider theme={themeMode}>
-      <Fragment>
-        <GlobalStyles />
-        <Routing />
-      </Fragment>
+      <GlobalStyles />
+      <Routing />
     </ThemeProvider>
   );
 }
