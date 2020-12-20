@@ -28,7 +28,7 @@ export const darkTheme = {
     color: "#fffcf2",
   },
   deskripsi: {
-    bg: "#161a1d",
+    bg: "#2a2a2e",
     h2: "#f8f9fa",
     p: "#eaeaea",
   },
