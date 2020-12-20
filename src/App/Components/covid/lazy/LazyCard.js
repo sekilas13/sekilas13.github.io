@@ -43,7 +43,7 @@ function LazyCard() {
         <Col lg={3} sm={5}>
           <CardWrapper
             label="Dirawat"
-            data={main ? main.perawatan.toLocaleString() : "==,==="}
+            data={main ? main.perawatan.toLocaleString() : "===,==="}
             icon={faHospital}
           />
         </Col>

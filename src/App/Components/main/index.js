@@ -1,13 +1,14 @@
-import { Fragment, Suspense, lazy } from "react";
+import { Fragment, Suspense } from "react";
 import JumbotronTop from "./Jumbotron-top";
 import Loading from "../../Custom/Loading";
+import loadable from "@loadable/component";
 import "./main.css";
 import "./responsive.css";
 
-const Deskripsi = lazy(() => import("./Deskripsi"));
-const KataOrang = lazy(() => import("./KataOrang"));
-const Gambar = lazy(() => import("./Gambar"));
-const Footer = lazy(() => import("./Footer"));
+const Deskripsi = loadable(() => import("./Deskripsi"));
+const KataOrang = loadable(() => import("./KataOrang"));
+const Gambar = loadable(() => import("./Gambar"));
+const Footer = loadable(() => import("./Footer"));
 
 function Main() {
   return (

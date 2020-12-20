@@ -1,11 +1,12 @@
 import { useSpring } from "react-spring";
-import { useRef, useEffect, Suspense, lazy } from "react";
+import { useRef, useEffect, Suspense } from "react";
 import { Row, Jumbotron, Container } from "react-bootstrap";
+import loadable from "@loadable/component";
 import "./SuspenseJumbotron.css";
 
-const Gambar = lazy(() => import("./lazy/JumbonImg"));
-const H1 = lazy(() => import("./lazy/JumbonH1"));
-const P = lazy(() => import("./lazy/JumbonP"));
+const Gambar = loadable(() => import("./lazy/JumbonImg"));
+const H1 = loadable(() => import("./lazy/JumbonH1"));
+const P = loadable(() => import("./lazy/JumbonP"));
 
 function JumbotronTop() {
   const ref = useRef();
