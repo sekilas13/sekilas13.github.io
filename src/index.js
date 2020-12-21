@@ -1,11 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { Provider } from "./App/utils/stateProvider";
+import loadable from "@loadable/component";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // import reportWebVitals from "./reportWebVitals";
+
+const Provider = loadable(() => import("./App/utils/stateProvider"), {
+  resolveComponent: (mod) => mod.Provider,
+  fallback: <></>,
+});
 
 ReactDOM.render(
   <Provider>
